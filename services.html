@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Uber</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm0-4.5c4.142 0 7.5-3.358 7.5-7.5S16.142 4.5 12 4.5 4.5 7.858 4.5 12s3.358 7.5 7.5 7.5z"
+                        fill="currentColor" />
+                </svg>
+                Uber
+            </a>
+            <!-- Desktop Nav -->
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="related.html" class="nav-link">Related</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="nav-link">Log in</a>
+                <a href="login.html" class="btn btn-primary route-404">Sign up</a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-nav-list">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <a href="about.html" class="mobile-nav-link">About Us</a>
+            <a href="related.html" class="mobile-nav-link">Related</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <a href="dashboard.html" class="mobile-nav-link">Dashboard Demo</a>
+        </nav>
+        <div class="mobile-actions">
+            <a href="login.html" class="btn btn-secondary" style="width: 100%;">Log in</a>
+            <button class="btn btn-primary route-404" style="width: 100%;">Sign up</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="section" style="padding-top: 120px; background-color: var(--color-bg-secondary);">
+            <div class="container text-center">
+                <h1 class="animate-on-scroll">Comprehensive Mobility Solutions</h1>
+                <p class="text-lead animate-on-scroll"
+                    style="margin: 24px auto 0 auto; max-width: 700px; text-align: center;">
+                    Whether it's a quick ride across town, a hot meal delivery, or moving bulk freight across the
+                    country, our integrated platform connects you with the services you need, precisely when you need
+                    them.
+                </p>
+            </div>
+        </section>
+
+        <!-- Category Filter Mockup -->
+        <section
+            style="background-color: var(--color-bg-primary); padding: 16px 0; border-bottom: 1px solid var(--color-border); position: sticky; top: var(--header-height); z-index: 900;">
+            <div class="container flex" style="gap: 16px; overflow-x: auto; white-space: nowrap; padding-bottom: 8px;">
+                <button class="badge"
+                    style="background-color: var(--color-white); color: var(--color-black); padding: 8px 16px; font-size: 0.875rem;">All
+                    Services</button>
+                <button class="badge"
+                    style="background-color: transparent; border: 1px solid var(--color-border); padding: 8px 16px; font-size: 0.875rem;">Personal</button>
+                <button class="badge"
+                    style="background-color: transparent; border: 1px solid var(--color-border); padding: 8px 16px; font-size: 0.875rem;">Business</button>
+                <button class="badge"
+                    style="background-color: transparent; border: 1px solid var(--color-border); padding: 8px 16px; font-size: 0.875rem;">Freight
+                    & Logistics</button>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+                    <!-- Ride -->
+                    <div class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+                        <span class="badge" style="align-self: flex-start; margin-bottom: 16px;">Personal</span>
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800"
+                                alt="Uber Ride">
+                        </div>
+                        <h3>Rideshare</h3>
+                        <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">Request a ride, hop in, and go.
+                            Choose from everyday options like UberX to premium cars like Uber Black. Features include
+                            up-front pricing and real-time GPS tracking.</p>
+                        <ul style="list-style: none; margin-bottom: 24px; padding: 0;">
+                            <li style="margin-bottom: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">✓
+                                Up-front pricing</li>
+                            <li style="margin-bottom: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">✓
+                                Verified drivers</li>
+                            <li style="font-size: 0.875rem; color: var(--color-text-secondary);">✓ Multiple vehicle
+                                classes</li>
+                        </ul>
+                        <button class="btn btn-secondary route-404" style="width: 100%;">Explore Ride Options</button>
+                    </div>
+
+                    <!-- Delivery -->
+                    <div class="card animate-on-scroll"
+                        style="transition-delay: 0.1s; display: flex; flex-direction: column;">
+                        <span class="badge" style="align-self: flex-start; margin-bottom: 16px;">Personal /
+                            Business</span>
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1628191010210-a59de33e5941?auto=format&fit=crop&q=80&w=800"
+                                alt="Uber Delivery">
+                        </div>
+                        <h3>Deliveries</h3>
+                        <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">Order from your favorite local
+                            restaurants, grab groceries, or send packages to loved ones reliably across town.</p>
+                        <ul style="list-style: none; margin-bottom: 24px; padding: 0;">
+                            <li style="margin-bottom: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">✓
+                                Contactless delivery</li>
+                            <li style="margin-bottom: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">✓
+                                Live order tracking</li>
+                            <li style="font-size: 0.875rem; color: var(--color-text-secondary);">✓ Huge restaurant
+                                network</li>
+                        </ul>
+                        <button class="btn btn-secondary route-404" style="width: 100%;">Order Now</button>
+                    </div>
+
+                    <!-- Business -->
+                    <div class="card animate-on-scroll"
+                        style="transition-delay: 0.2s; display: flex; flex-direction: column;">
+                        <span class="badge"
+                            style="align-self: flex-start; margin-bottom: 16px; background-color: var(--color-accent);">Business</span>
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800"
+                                alt="Uber Business">
+                        </div>
+                        <h3>Uber for Business</h3>
+                        <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">A powerful platform to manage global
+                            rides, meals, and local deliveries for companies of any size. Track expenses and set
+                            policies easily.</p>
+                        <ul style="list-style: none; margin-bottom: 24px; padding: 0;">
+                            <li style="margin-bottom: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">✓
+                                Centralized dashboard</li>
+                            <li style="margin-bottom: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">✓
+                                Automated expensing</li>
+                            <li style="font-size: 0.875rem; color: var(--color-text-secondary);">✓ Custom travel
+                                policies</li>
+                        </ul>
+                        <button class="btn btn-secondary route-404" style="width: 100%;">Create Business
+                            Account</button>
+                    </div>
+
+                    <!-- Transit -->
+                    <div class="card animate-on-scroll"
+                        style="transition-delay: 0.3s; display: flex; flex-direction: column;">
+                        <span class="badge" style="align-self: flex-start; margin-bottom: 16px;">Personal</span>
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1544839846-f027419103e2?auto=format&fit=crop&q=80&w=800"
+                                alt="Uber Transit">
+                        </div>
+                        <h3>Public Transit</h3>
+                        <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">Plan your transit journey, view live
+                            schedules, and pay easily through the app in supported cities worldwide.</p>
+                        <ul style="list-style: none; margin-bottom: 24px; padding: 0;">
+                            <li style="margin-bottom: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">✓
+                                Step-by-step directions</li>
+                            <li style="margin-bottom: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">✓
+                                Real-time departure info</li>
+                            <li style="font-size: 0.875rem; color: var(--color-text-secondary);">✓ In-app ticket
+                                purchasing</li>
+                        </ul>
+                        <button class="btn btn-secondary route-404" style="width: 100%;">View Supported Cities</button>
+                    </div>
+
+                    <!-- Freight -->
+                    <div class="card animate-on-scroll"
+                        style="transition-delay: 0.4s; display: flex; flex-direction: column;">
+                        <span class="badge"
+                            style="align-self: flex-start; margin-bottom: 16px; background-color: var(--color-accent);">Logistics</span>
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8ed7c80a71?auto=format&fit=crop&q=80&w=800"
+                                alt="Uber Freight">
+                        </div>
+                        <h3>Uber Freight</h3>
+                        <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">Simplifying logistics. We match
+                            shippers with carriers, providing transparent pricing, fast payments, and facility ratings.
+                        </p>
+                        <ul style="list-style: none; margin-bottom: 24px; padding: 0;">
+                            <li style="margin-bottom: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">✓
+                                Load matching algorithms</li>
+                            <li style="margin-bottom: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">✓
+                                Fleet management tools</li>
+                            <li style="font-size: 0.875rem; color: var(--color-text-secondary);">✓ Market insights
+                                dashboard</li>
+                        </ul>
+                        <button class="btn btn-secondary route-404" style="width: 100%;">Visit Freight Platform</button>
+                    </div>
+
+                    <!-- Health -->
+                    <div class="card animate-on-scroll"
+                        style="transition-delay: 0.5s; display: flex; flex-direction: column;">
+                        <span class="badge"
+                            style="align-self: flex-start; margin-bottom: 16px; background-color: var(--color-accent);">Business
+                            / Healthcare</span>
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1538108149393-cebb47cdf504?auto=format&fit=crop&q=80&w=800"
+                                alt="Uber Health">
+                        </div>
+                        <h3>Uber Health</h3>
+                        <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">A HIPAA-compliant technology
+                            solution designed for healthcare organizations to arrange rides and deliveries for patients.
+                        </p>
+                        <ul style="list-style: none; margin-bottom: 24px; padding: 0;">
+                            <li style="margin-bottom: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">✓
+                                HIPAA compliant</li>
+                            <li style="margin-bottom: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">✓
+                                No smartphone needed for patient</li>
+                            <li style="font-size: 0.875rem; color: var(--color-text-secondary);">✓ Reduce missed
+                                appointments</li>
+                        </ul>
+                        <button class="btn btn-secondary route-404" style="width: 100%;">Learn About Health API</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Transparency Banner -->
+        <section class="section"
+            style="background-color: var(--color-accent); color: var(--color-white); text-align: center;">
+            <div class="container animate-on-scroll">
+                <h2 style="color: var(--color-white); margin-bottom: 16px;">Transparent Pricing</h2>
+                <p style="max-width: 600px; margin: 0 auto 32px auto; font-size: 1.125rem;">We believe in upfront,
+                    transparent pricing. Know exactly what you'll pay before you book, with a clear breakdown of fares,
+                    fees, and surcharges.</p>
+                <button class="btn btn-primary route-404">View Price Estimator</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Same as index.html ...) -->
+    <!-- Removed for brevity, let's include a shortened version since we didn't use a templating engine -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="footer-logo">Uber</span>
+                    <p class="text-muted">Visit Help Center</p>
+                </div>
+                <!-- Adding essential links back -->
+            </div>
+            <div class="footer-bottom">
+                <div class="flex" style="gap: 24px;">
+                    <a href="404.html" class="footer-link">Privacy policy</a>
+                    <a href="404.html" class="footer-link">Accessibility</a>
+                    <a href="404.html" class="footer-link">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

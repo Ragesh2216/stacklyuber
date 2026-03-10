@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsroom & Related | Uber</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .news-filter {
+            display: flex;
+            gap: 16px;
+            margin: 32px 0;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--color-text-muted);
+            cursor: pointer;
+            padding-bottom: 12px;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .filter-btn.active {
+            color: var(--color-text-primary);
+        }
+
+        .filter-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--color-text-primary);
+        }
+
+        .news-featured {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 48px;
+        }
+
+        .news-featured img {
+            height: 400px;
+        }
+
+        @media (max-width: 900px) {
+            .news-featured {
+                grid-template-columns: 1fr;
+            }
+
+            .news-featured img {
+                height: 250px;
+            }
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 64px;
+        }
+
+        .page-item {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--color-border);
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .page-item.active {
+            background-color: var(--color-text-primary);
+            color: var(--color-bg-primary);
+            border-color: var(--color-text-primary);
+        }
+
+        .page-item:not(.active):hover {
+            background-color: var(--color-bg-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm0-4.5c4.142 0 7.5-3.358 7.5-7.5S16.142 4.5 12 4.5 4.5 7.858 4.5 12s3.358 7.5 7.5 7.5z"
+                        fill="currentColor" />
+                </svg>
+                Uber
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="related.html" class="nav-link active">Related</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="nav-link">Log in</a>
+                <a href="login.html" class="btn btn-primary route-404">Sign up</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-nav-list">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <a href="about.html" class="mobile-nav-link">About Us</a>
+            <a href="related.html" class="mobile-nav-link">Related</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <a href="dashboard.html" class="mobile-nav-link">Dashboard Demo</a>
+        </nav>
+        <div class="mobile-actions">
+            <a href="login.html" class="btn btn-secondary" style="width: 100%;">Log in</a>
+            <button class="btn btn-primary route-404" style="width: 100%;">Sign up</button>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <section class="section" style="padding-top: 120px;">
+            <div class="container">
+                <h1 class="animate-on-scroll">Uber Newsroom</h1>
+                <p class="text-lead animate-on-scroll" style="margin-top: 16px;">The latest news, announcements, and
+                    stories from across the globe.</p>
+
+                <div class="news-filter animate-on-scroll" style="transition-delay: 0.1s;">
+                    <button class="filter-btn active">All News</button>
+                    <button class="filter-btn">Company Profile</button>
+                    <button class="filter-btn">Products & Services</button>
+                    <button class="filter-btn">Corporate Social Responsibility</button>
+                    <button class="filter-btn">Innovation</button>
+                </div>
+
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+
+                    <!-- Featured Article -->
+                    <div class="news-featured animate-on-scroll">
+                        <div class="card-img-wrapper" style="border-radius: var(--border-radius-lg);">
+                            <img src="https://images.unsplash.com/photo-1542314831-c6a47ea20be8?auto=format&fit=crop&q=80&w=1200"
+                                alt="Uber corporate culture" style="object-fit: cover;">
+                        </div>
+                        <div>
+                            <span class="badge" style="margin-bottom: 24px;">Company Profile</span>
+                            <h2>Uber Commits to Zero-Emissions by 2040</h2>
+                            <p class="text-muted" style="margin: 24px 0;">We are making a global commitment to become a
+                                fully electric, zero-emission platform. Every ride, every delivery, contributing to
+                                cleaner cities and healthier communities worldwide.</p>
+                            <a href="404.html" class="nav-link"
+                                style="padding: 0; display: inline-flex; align-items: center; gap: 8px; color: var(--color-accent);">Read
+                                full announcement <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg></a>
+                        </div>
+                    </div>
+
+                    <!-- Article 1 -->
+                    <div class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+                        <span class="badge" style="align-self: flex-start; margin-bottom: 16px;">Products &
+                            Services</span>
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800"
+                                alt="Uber App Feature">
+                        </div>
+                        <h3 style="margin: 16px 0;">New Safety Features Rolled Out Globally</h3>
+                        <p class="text-muted" style="margin-bottom: 24px; flex-grow: 1;">Enhanced RideCheck and Audio
+                            Recording capabilities are now available to provide even more peace of mind to riders and
+                            drivers.</p>
+                        <a href="404.html" class="nav-link route-404"
+                            style="padding: 0; color: var(--color-accent);">Read more</a>
+                    </div>
+
+                    <!-- Article 2 -->
+                    <div class="card animate-on-scroll"
+                        style="transition-delay: 0.1s; display: flex; flex-direction: column;">
+                        <span class="badge"
+                            style="align-self: flex-start; margin-bottom: 16px; background-color: var(--color-accent);">Innovation</span>
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800"
+                                alt="Autonomous driving tech">
+                        </div>
+                        <h3 style="margin: 16px 0;">The Future of Autonomous Freight</h3>
+                        <p class="text-muted" style="margin-bottom: 24px; flex-grow: 1;">Our Advanced Technologies Group
+                            shares updates on testing self-driving trucks in long-haul logistics corridors.</p>
+                        <a href="404.html" class="nav-link route-404"
+                            style="padding: 0; color: var(--color-accent);">Read more</a>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div class="card animate-on-scroll"
+                        style="transition-delay: 0.2s; display: flex; flex-direction: column;">
+                        <span class="badge" style="align-self: flex-start; margin-bottom: 16px;">Corporate Social
+                            Responsibility</span>
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1544839846-f027419103e2?auto=format&fit=crop&q=80&w=800"
+                                alt="Community support">
+                        </div>
+                        <h3 style="margin: 16px 0;">Supporting Local Restaurants with Eats</h3>
+                        <p class="text-muted" style="margin-bottom: 24px; flex-grow: 1;">New initiatives to lower fees
+                            for independent restaurants and give back to delivery personnel during tough economic times.
+                        </p>
+                        <a href="404.html" class="nav-link route-404"
+                            style="padding: 0; color: var(--color-accent);">Read more</a>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination animate-on-scroll" style="transition-delay: 0.3s;">
+                    <div class="page-item active">1</div>
+                    <div class="page-item route-404">2</div>
+                    <div class="page-item route-404">3</div>
+                    <div class="page-item route-404">...</div>
+                    <div class="page-item route-404">12</div>
+                    <div class="page-item route-404">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer omitted for brevity -->
+    <script src="script.js"></script>
+</body>
+
+</html>

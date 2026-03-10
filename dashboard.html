@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Uber</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .dashboard-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .dashboard-main {
+            display: flex;
+            flex: 1;
+            margin-top: var(--header-height);
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: var(--color-bg-secondary);
+            border-right: 1px solid var(--color-border);
+            position: fixed;
+            height: calc(100vh - var(--header-height));
+            overflow-y: auto;
+            padding: 24px;
+            transition: transform 0.3s ease;
+            z-index: 100;
+        }
+
+        .content-area {
+            flex: 1;
+            padding: 32px;
+            margin-left: 250px;
+            background-color: var(--color-bg-primary);
+            min-height: calc(100vh - var(--header-height));
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 8px;
+            color: var(--color-text-primary);
+            transition: background-color 0.2s;
+            margin-bottom: 8px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background-color: var(--color-bg-tertiary);
+        }
+
+        .stat-card {
+            background-color: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-val {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 900px) {
+            .sidebar {
+                transform: translateX(-100%);
+                z-index: 1000;
+                box-shadow: var(--shadow-lg);
+            }
+
+            .sidebar.mobile-open {
+                transform: translateX(0);
+            }
+
+            .content-area {
+                margin-left: 0;
+                padding: 16px;
+            }
+        }
+
+        .chart-container {
+            display: flex;
+            align-items: flex-end;
+            gap: 12px;
+            height: 200px;
+            padding-top: 32px;
+            margin-top: 16px;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 8px;
+        }
+
+        .chart-bar-wrap {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            height: 100%;
+            position: relative;
+        }
+
+        .chart-bar {
+            width: 100%;
+            max-width: 40px;
+            background-color: var(--color-accent);
+            border-radius: 4px 4px 0 0;
+            animation: barGrow 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            transform-origin: bottom;
+            transform: scaleY(0);
+        }
+
+        .chart-label {
+            font-size: 0.75rem;
+            color: var(--color-text-muted);
+            margin-top: 8px;
+        }
+
+        @keyframes barGrow {
+            to {
+                transform: scaleY(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="header" style="border-bottom: 1px solid var(--color-border);">
+            <div class="container nav-container" style="max-width: 100%; padding: 0 24px;">
+                <div class="flex items-center gap-16">
+                    <button class="btn btn-icon d-md-none" id="sidebarToggle"
+                        style="margin-right: 16px; display: none;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                    <a href="index.html" class="logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm0-4.5c4.142 0 7.5-3.358 7.5-7.5S16.142 4.5 12 4.5 4.5 7.858 4.5 12s3.358 7.5 7.5 7.5z"
+                                fill="currentColor" />
+                        </svg>
+                        Uber
+                    </a>
+                </div>
+                <!-- Nav Actions -->
+            </div>
+        </header>
+        <div class="dashboard-main">
+            <aside class="sidebar" id="dashboardSidebar">
+                <div
+                    style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-text-muted); font-weight: 700; margin: 16px 12px 8px 12px;">
+                    Overview</div>
+                <div class="nav-item active">Home</div>
+                <div class="nav-item route-404">My Trips</div>
+                <div class="nav-item route-404">My Deliveries</div>
+                <div class="nav-item route-404">Messages <span class="badge"
+                        style="background-color: var(--color-accent); margin-left: auto;">2</span></div>
+                <div
+                    style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-text-muted); font-weight: 700; margin: 32px 12px 8px 12px;">
+                    Account</div>
+                <div class="nav-item route-404">Wallet</div>
+                <div class="nav-item route-404">Settings</div>
+            </aside>
+            <main class="content-area">
+                <div class="flex justify-between items-center" style="margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
+                    <h1 class="animate-on-scroll">Welcome back, User</h1>
+                    <div class="flex" style="gap: 16px;">
+                        <button class="btn btn-secondary route-404">New Request</button>
+                    </div>
+                </div>
+                <div class="grid animate-on-scroll"
+                    style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-bottom: 32px;">
+                    <div class="stat-card">
+                        <span class="text-muted">Total Trips this Month</span>
+                        <div class="stat-val">12</div>
+                        <div style="color: #06C167; font-size: 0.875rem; margin-top: 8px;">↑ 20% vs last month</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="text-muted">Uber Cash Balance</span>
+                        <div class="stat-val">$45.50</div>
+                    </div>
+                </div>
+                <div class="grid animate-on-scroll" style="grid-template-columns: 2fr 1fr; gap: 24px;">
+                    <div class="card">
+                        <div class="flex justify-between items-center" style="margin-bottom: 8px;">
+                            <h3>Spending Overview</h3>
+                        </div>
+                        <div class="chart-container">
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar" style="height: 30%;"></div><span class="chart-label">May</span>
+                            </div>
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar" style="height: 50%;"></div><span class="chart-label">Jun</span>
+                            </div>
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar" style="height: 80%;"></div><span class="chart-label">Jul</span>
+                            </div>
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar" style="height: 40%;"></div><span class="chart-label">Aug</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 style="margin-bottom: 16px;">Updates</h3>
+                        <div style="display: flex; flex-direction: column; gap: 16px;">
+                            <div class="route-404" style="cursor: pointer;">
+                                <div
+                                    style="font-weight: 500; font-size: 0.875rem; color: var(--color-accent); margin-bottom: 4px;">
+                                    Promo applied</div>
+                                <p class="text-small">You've successfully added the promotion 'RIDES10' to your account.
+                                    Valid for 3 days.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="animate-on-scroll" style="margin: 32px 0 16px 0;">Recent Activity</h3>
+                <div class="animate-on-scroll"
+                    style="background-color: var(--color-bg-secondary); border-radius: 12px; border: 1px solid var(--color-border); overflow: hidden;">
+                    <div class="flex items-center justify-between route-404"
+                        style="padding: 16px 24px; border-bottom: 1px solid var(--color-border); cursor: pointer; transition: background-color 0.2s;">
+                        <div class="flex items-center gap-16">
+                            <div>
+                                <div style="font-weight: 500;">UberX • City Center to Airport</div>
+                                <div class="text-muted text-small">Oct 12, 10:45 AM</div>
+                            </div>
+                        </div>
+                        <div style="font-weight: 500;">$24.50</div>
+                    </div>
+                    <div style="padding: 16px 24px; text-align: center;">
+                        <button class="btn btn-secondary route-404"
+                            style="background: transparent; border: none; color: var(--color-accent);">View all
+                            activity</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

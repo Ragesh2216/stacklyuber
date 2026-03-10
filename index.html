@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Uber Services - Premium platform for mobility and logistics">
+    <title>Uber | Go anywhere, get anything</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Start Screen Animation -->
+    <div id="start-screen" class="start-screen">
+        <div class="start-logo">
+            <span class="start-logo-icon">U</span>
+            Uber
+        </div>
+        <div class="start-loader">
+            <div class="start-loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm0-4.5c4.142 0 7.5-3.358 7.5-7.5S16.142 4.5 12 4.5 4.5 7.858 4.5 12s3.358 7.5 7.5 7.5z"
+                        fill="currentColor" />
+                </svg>
+                Uber
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="related.html" class="nav-link">Related</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="nav-link">Log in</a>
+                <a href="login.html" class="btn btn-primary route-404">Sign up</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-nav-list">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <a href="about.html" class="mobile-nav-link">About Us</a>
+            <a href="related.html" class="mobile-nav-link">Related</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <a href="dashboard.html" class="mobile-nav-link">Dashboard Demo</a>
+        </nav>
+        <div class="mobile-actions">
+            <a href="login.html" class="btn btn-secondary" style="width: 100%;">Log in</a>
+            <button class="btn btn-primary route-404" style="width: 100%;">Sign up</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="section"
+            style="padding-top: 120px; min-height: 80vh; display: flex; align-items: center; position: relative; overflow: hidden;">
+            <div
+                style="position: absolute; top: -20%; right: -10%; width: 60%; height: 140%; background: linear-gradient(225deg, rgba(39, 110, 241, 0.2) 0%, rgba(0,0,0,0) 70%); border-radius: 50%; filter: blur(80px); z-index: -1;">
+            </div>
+
+            <div class="container grid" style="grid-template-columns: 1fr; align-items: center;">
+                <div style="max-width: 650px;">
+                    <h1 class="animate-on-scroll" style="font-size: 3.5rem;">Go anywhere with Uber</h1>
+                    <p class="text-lead animate-on-scroll"
+                        style="margin-top: 24px; margin-bottom: 32px; transition-delay: 0.1s; font-size: 1.25rem;">
+                        Request a ride, hop in, and go. Enjoy premium mobility and effortless logistics right at your
+                        fingertips. From local commutes to cross-country freight, we've got you covered.
+                    </p>
+                    <div class="flex animate-on-scroll" style="gap: 16px; flex-wrap: wrap; transition-delay: 0.2s;">
+                        <button class="btn btn-primary route-404" style="font-size: 1.1rem; padding: 14px 28px;">Request
+                            a ride</button>
+                        <button class="btn btn-secondary route-404"
+                            style="font-size: 1.1rem; padding: 14px 28px;">Schedule for later</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drive or Deliver Section -->
+        <section class="section" style="background-color: var(--color-bg-secondary);">
+            <div class="container grid" style="grid-template-columns: 1fr; max-width: 1000px;">
+                <div class="card flex-col justify-between animate-on-scroll"
+                    style="min-height: 400px; background: linear-gradient(135deg, var(--color-bg-tertiary) 0%, var(--color-bg-primary) 100%);">
+                    <div>
+                        <h2 style="font-size: 2.5rem; max-width: 600px;">Drive when you want, make what you need</h2>
+                        <p class="text-lead mt-16" style="margin-top: 24px; max-width: 700px;">Make money on your
+                            schedule with deliveries or rides—or both. You can use your own car or choose a rental
+                            through Uber. Flexibility is our promise, empowering you to earn on your own terms.</p>
+                        <ul style="margin-top: 24px; list-style: none; padding: 0;">
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" style="color: var(--color-accent);">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Set your own hours
+                            </li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" style="color: var(--color-accent);">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Instant payouts available
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 12px;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" style="color: var(--color-accent);">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> 24/7 dedicated support
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-32" style="margin-top: 48px;">
+                        <button class="btn btn-primary route-404" style="padding: 14px 32px;">Get started
+                            driving</button>
+                        <a href="login.html" class="nav-link" style="margin-left: 24px;">Already have an account? Sign
+                            in</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Focus Section -->
+        <section class="section">
+            <div class="container grid" style="grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+                <div class="animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800"
+                        alt="Safety Features" style="border-radius: var(--border-radius-lg); width: 100%;">
+                </div>
+                <div class="animate-on-scroll" style="transition-delay: 0.2s;">
+                    <h2>Your safety is our priority</h2>
+                    <p class="text-lead" style="margin-top: 24px; margin-bottom: 32px;">Every ride is tracked from start
+                        to finish. With comprehensive safety features built directly into the app, you can ride with
+                        peace of mind knowing we're looking out for you.</p>
+
+                    <div style="display: grid; gap: 24px;">
+                        <div>
+                            <h4>Share your trip</h4>
+                            <p class="text-muted" style="margin-top: 8px;">Let your loved ones know where you are in
+                                real-time, directly from the app.</p>
+                        </div>
+                        <div>
+                            <h4>Emergency assistance button</h4>
+                            <p class="text-muted" style="margin-top: 8px;">In an emergency, connect directly with local
+                                authorities through the app.</p>
+                        </div>
+                        <div>
+                            <h4>Driver screening</h4>
+                            <p class="text-muted" style="margin-top: 8px;">All drivers undergo thorough background
+                                checks before their first trip.</p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-secondary route-404" style="margin-top: 32px;">Explore safety
+                        features</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download App Section -->
+        <section class="section" style="background-color: var(--color-bg-tertiary); text-align: center;">
+            <div class="container">
+                <h2 class="animate-on-scroll">There's more to love in the apps</h2>
+                <div class="grid animate-on-scroll"
+                    style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 48px; max-width: 800px; margin-left: auto; margin-right: auto; transition-delay: 0.1s;">
+
+                    <div class="card"
+                        style="display: flex; align-items: center; text-align: left; padding: 24px; border: 1px solid var(--color-border); cursor: pointer;"
+                        onclick="window.location.href='404.html'">
+                        <div
+                            style="width: 80px; height: 80px; background-color: var(--color-black); display: flex; justify-content: center; align-items: center; border-radius: 16px; margin-right: 24px; border: 1px solid var(--color-border-light);">
+                            <span style="font-size: 2rem; font-weight: 700; color: var(--color-white);">Uber</span>
+                        </div>
+                        <div>
+                            <h3 style="margin-bottom: 8px;">Download the Uber app</h3>
+                            <span class="nav-link route-404" style="color: var(--color-accent); font-weight: 600;">Scan
+                                to download -></span>
+                        </div>
+                    </div>
+
+                    <div class="card"
+                        style="display: flex; align-items: center; text-align: left; padding: 24px; border: 1px solid var(--color-border); cursor: pointer;"
+                        onclick="window.location.href='404.html'">
+                        <div
+                            style="width: 80px; height: 80px; background-color: #06C167; display: flex; justify-content: center; align-items: center; border-radius: 16px; margin-right: 24px;">
+                            <span style="font-size: 2rem; font-weight: 700; color: var(--color-white);">Eats</span>
+                        </div>
+                        <div>
+                            <h3 style="margin-bottom: 8px;">Download the Driver app</h3>
+                            <span class="nav-link route-404" style="color: var(--color-accent); font-weight: 600;">Scan
+                                to download -></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Suggestions Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="animate-on-scroll" style="margin-bottom: 48px; text-align: center;">Explore our offerings
+                </h2>
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="card animate-on-scroll" style="transition-delay: 0.1s;">
+                        <div class="flex justify-between items-center" style="margin-bottom: 24px;">
+                            <h3>Ride</h3>
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0110 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-muted" style="margin-bottom: 32px;">Go anywhere with Uber. Request a ride, hop
+                            in, and go. Designed for reliability and comfort.</p>
+                        <button class="btn btn-secondary route-404" style="width: 100%;">Details</button>
+                    </div>
+
+                    <div class="card animate-on-scroll" style="transition-delay: 0.2s;">
+                        <div class="flex justify-between items-center" style="margin-bottom: 24px;">
+                            <h3>Package</h3>
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <p class="text-muted" style="margin-bottom: 32px;">Send and receive packages effortlessly with
+                            real-time tracking from door to door.</p>
+                        <button class="btn btn-secondary route-404" style="width: 100%;">Details</button>
+                    </div>
+
+                    <div class="card animate-on-scroll" style="transition-delay: 0.3s;">
+                        <div class="flex justify-between items-center" style="margin-bottom: 24px;">
+                            <h3>Transit</h3>
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                <rect x="9" y="9" width="6" height="6"></rect>
+                                <line x1="9" y1="1" x2="9" y2="4"></line>
+                                <line x1="15" y1="1" x2="15" y2="4"></line>
+                                <line x1="9" y1="20" x2="9" y2="23"></line>
+                                <line x1="15" y1="20" x2="15" y2="23"></line>
+                                <line x1="20" y1="9" x2="23" y2="9"></line>
+                                <line x1="20" y1="14" x2="23" y2="14"></line>
+                                <line x1="1" y1="9" x2="4" y2="9"></line>
+                                <line x1="1" y1="14" x2="4" y2="14"></line>
+                            </svg>
+                        </div>
+                        <p class="text-muted" style="margin-bottom: 32px;">Discover smarter ways to plan and pay for
+                            your public transit journeys right in our app.</p>
+                        <button class="btn btn-secondary route-404" style="width: 100%;">Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="footer-logo">Uber</span>
+                    <p class="text-muted">Visit Help Center</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">About us</a></li>
+                        <li><a href="services.html" class="footer-link">Our offerings</a></li>
+                        <li><a href="related.html" class="footer-link">Newsroom</a></li>
+                        <li><a href="404.html" class="footer-link">Investors</a></li>
+                        <li><a href="404.html" class="footer-link">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html" class="footer-link">Ride</a></li>
+                        <li><a href="404.html" class="footer-link">Drive</a></li>
+                        <li><a href="404.html" class="footer-link">Deliver</a></li>
+                        <li><a href="404.html" class="footer-link">Eat</a></li>
+                        <li><a href="404.html" class="footer-link">Uber for Business</a></li>
+                        <li><a href="404.html" class="footer-link">Uber Freight</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Global citizenship</h4>
+                    <ul class="footer-links">
+                        <li><a href="404.html" class="footer-link">Safety</a></li>
+                        <li><a href="404.html" class="footer-link">Diversity and Inclusion</a></li>
+                        <li><a href="404.html" class="footer-link">Sustainability</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="flex" style="gap: 24px;">
+                    <a href="404.html" class="social-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg></a>
+                    <a href="404.html" class="social-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                            </path>
+                        </svg></a>
+                    <a href="404.html" class="social-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg></a>
+                </div>
+
+                <div class="flex" style="gap: 24px;">
+                    <a href="404.html" class="footer-link">Privacy policy</a>
+                    <a href="404.html" class="footer-link">Accessibility</a>
+                    <a href="404.html" class="footer-link">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <style>
+        /* Responsive adjustments for the newly added Grid layout on mobile */
+        @media (max-width: 768px) {
+            .container.grid[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 32px !important;
+            }
+        }
+    </style>
+</body>
+
+</html>

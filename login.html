@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in To Uber | Uber</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login-layout {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .login-left {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-bg-primary);
+            padding: 24px;
+            position: relative;
+        }
+
+        .login-right {
+            flex: 1;
+            background-color: var(--color-bg-secondary);
+            background-image: url('https://images.unsplash.com/photo-1542314831-c6a47ea20be8?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .login-right::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+        }
+
+        @media (max-width: 900px) {
+            .login-right {
+                display: none;
+            }
+        }
+
+        /* Layout for QR code split */
+        .auth-options {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .auth-form {
+            flex: 1;
+            min-width: 320px;
+        }
+
+        .auth-qr {
+            display: none;
+            width: 200px;
+            padding-left: 32px;
+            border-left: 1px solid var(--color-border);
+            text-align: center;
+        }
+
+        @media (min-width: 600px) {
+            .auth-qr {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-layout">
+        <!-- Left Side: Form -->
+        <div class="login-left">
+            <a href="index.html" class="logo" style="position: absolute; top: 32px; left: 32px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm0-4.5c4.142 0 7.5-3.358 7.5-7.5S16.142 4.5 12 4.5 4.5 7.858 4.5 12s3.358 7.5 7.5 7.5z"
+                        fill="currentColor" />
+                </svg>
+                Uber
+            </a>
+
+            <div class="auth-options">
+                <div class="auth-form animate-on-scroll">
+                    <h2 style="margin-bottom: 32px; font-size: 1.75rem;">What's your phone number or email?</h2>
+
+                    <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+                        <div class="form-group">
+                            <input type="text" id="loginInput" class="form-control"
+                                placeholder="Enter phone number or email"
+                                style="font-size: 1.125rem; padding: 16px; background-color: var(--color-bg-secondary);"
+                                required autofocus>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary"
+                            style="width: 100%; padding: 16px; font-size: 1.125rem; margin-top: 16px;">Continue</button>
+                    </form>
+
+                    <div style="display: flex; align-items: center; margin: 32px 0;">
+                        <div style="flex: 1; height: 1px; background-color: var(--color-border);"></div>
+                        <div style="padding: 0 16px; color: var(--color-text-muted); font-size: 0.875rem;">or</div>
+                        <div style="flex: 1; height: 1px; background-color: var(--color-border);"></div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <button class="btn btn-secondary route-404"
+                            style="width: 100%; padding: 16px; border-radius: 8px; justify-content: flex-start; text-align: left; background-color: var(--color-bg-secondary); border: none;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" style="margin-right: 16px;"
+                                fill="currentColor">
+                                <path
+                                    d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z" />
+                            </svg>
+                            Continue with Google
+                        </button>
+                        <button class="btn btn-secondary route-404"
+                            style="width: 100%; padding: 16px; border-radius: 8px; justify-content: flex-start; text-align: left; background-color: var(--color-bg-secondary); border: none;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" style="margin-right: 16px;"
+                                fill="currentColor">
+                                <path
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                            </svg>
+                            Continue with Apple
+                        </button>
+                    </div>
+
+                    <p class="text-small text-muted" style="margin-top: 32px;">By proceeding, you consent to get calls,
+                        WhatsApp or SMS messages, including by automated means, from Uber and its affiliates to the
+                        number provided.</p>
+                </div>
+
+                <!-- QR Code Login Mockup -->
+                <div class="auth-qr animate-on-scroll" style="transition-delay: 0.1s;">
+                    <div
+                        style="background-color: var(--color-white); padding: 16px; border-radius: var(--border-radius-md); display: inline-block; margin-bottom: 24px;">
+                        <!-- SVG graphic to look like a QR code -->
+                        <svg width="120" height="120" viewBox="0 0 100 100" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100" height="100" fill="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H40V40H10V10ZM15 15V35H35V15H15Z"
+                                fill="black" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M60 10H90V40H60V10ZM65 15V35H85V15H65Z"
+                                fill="black" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 60H40V90H10V60ZM15 65V85H35V65H15Z"
+                                fill="black" />
+                            <rect x="20" y="20" width="10" height="10" fill="black" />
+                            <rect x="70" y="20" width="10" height="10" fill="black" />
+                            <rect x="20" y="70" width="10" height="10" fill="black" />
+                            <!-- Random blocks -->
+                            <rect x="60" y="60" width="10" height="10" fill="black" />
+                            <rect x="80" y="60" width="10" height="10" fill="black" />
+                            <rect x="60" y="80" width="10" height="10" fill="black" />
+                            <rect x="80" y="80" width="10" height="10" fill="black" />
+                            <rect x="70" y="70" width="10" height="10" fill="black" />
+                            <rect x="45" y="10" width="10" height="20" fill="black" />
+                            <rect x="45" y="40" width="10" height="10" fill="black" />
+                            <rect x="10" y="45" width="20" height="10" fill="black" />
+                            <rect x="40" y="55" width="10" height="40" fill="black" />
+                        </svg>
+                    </div>
+                    <h3>Log in with QR code</h3>
+                    <p class="text-small text-muted" style="margin-top: 8px;">Scan this with your phone's camera to log
+                        in instantly.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Side: Imagery/Testimonial -->
+        <div class="login-right animate-on-scroll">
+            <div
+                style="position: absolute; bottom: 48px; left: 48px; right: 48px; color: var(--color-white); z-index: 10;">
+                <h3 style="font-size: 2rem; margin-bottom: 16px; font-weight: 500;">"Uber gives me the flexibility I
+                    need to earn around my own schedule. It's been a game changer for my family."</h3>
+                <p style="font-weight: 600; font-size: 1.125rem;">Sarah T. <span class="text-muted"
+                        style="color: rgba(255,255,255,0.7); font-weight: 400;">— Driver in Chicago</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

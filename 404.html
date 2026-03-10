@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Uber</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="height: 100vh; display: flex; flex-direction: column; background-color: var(--color-bg-primary);">
+    <header class="header" style="position: relative; background: transparent; backdrop-filter: none; border: none;">
+        <div class="container nav-container" style="justify-content: flex-start;">
+            <a href="index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm0-4.5c4.142 0 7.5-3.358 7.5-7.5S16.142 4.5 12 4.5 4.5 7.858 4.5 12s3.358 7.5 7.5 7.5z"
+                        fill="currentColor" />
+                </svg>
+                Uber
+            </a>
+        </div>
+    </header>
+
+    <main class="main-content flex-col items-center justify-center" style="padding: 0 24px;">
+        <div style="text-align: center; max-width: 500px;">
+            <!-- Simple animated routing icon -->
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round"
+                style="margin-bottom: 32px; color: var(--color-accent); animation: float 3s ease-in-out infinite;">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+
+            <h1 style="margin-bottom: 16px;">This route doesn't exist yet</h1>
+            <p class="text-lead" style="margin-bottom: 40px;">
+                You've clicked on a mockup link. In a full application, this would take you to the requested feature or
+                page.
+            </p>
+
+            <div class="flex items-center justify-center" style="gap: 16px;">
+                <button onclick="window.history.back()" class="btn btn-secondary">Go back</button>
+                <a href="index.html" class="btn btn-primary">Return Home</a>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</body>
+
+</html>

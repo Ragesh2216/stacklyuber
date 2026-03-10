@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Support | Uber</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .faq-item {
+            border-bottom: 1px solid var(--color-border);
+            padding: 16px 0;
+            cursor: pointer;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+
+        .faq-answer {
+            margin-top: 12px;
+            color: var(--color-text-muted);
+            display: none;
+            line-height: 1.6;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .location-card {
+            background-color: var(--color-bg-secondary);
+            padding: 24px;
+            border-radius: var(--border-radius-md);
+            border: 1px solid var(--color-border);
+        }
+
+        .location-card h4 {
+            margin-bottom: 8px;
+            color: var(--color-white);
+        }
+
+        .location-card p {
+            color: var(--color-text-muted);
+            margin-bottom: 16px;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm0-4.5c4.142 0 7.5-3.358 7.5-7.5S16.142 4.5 12 4.5 4.5 7.858 4.5 12s3.358 7.5 7.5 7.5z"
+                        fill="currentColor" />
+                </svg>
+                Uber
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="related.html" class="nav-link">Related</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="nav-link">Log in</a>
+                <a href="login.html" class="btn btn-primary route-404">Sign up</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-nav-list">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <a href="about.html" class="mobile-nav-link">About Us</a>
+            <a href="related.html" class="mobile-nav-link">Related</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <a href="dashboard.html" class="mobile-nav-link">Dashboard Demo</a>
+        </nav>
+        <div class="mobile-actions">
+            <a href="login.html" class="btn btn-secondary" style="width: 100%;">Log in</a>
+            <button class="btn btn-primary route-404" style="width: 100%;">Sign up</button>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <!-- Hero & Form -->
+        <section class="section" style="padding-top: 120px;">
+            <div class="container grid" style="grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;">
+                <div class="animate-on-scroll">
+                    <h1>How can we help?</h1>
+                    <p class="text-lead" style="margin-top: 16px; margin-bottom: 32px;">Whether you're a rider, driver,
+                        eater, or restaurant partner, we're here to help make your experience seamless.</p>
+
+                    <div style="display: flex; flex-direction: column; gap: 24px;">
+                        <div style="display: flex; align-items: flex-start; gap: 16px;">
+                            <div class="btn-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>24/7 Phone Support</h4>
+                                <p class="text-muted text-small">Available via the app for active trips and urgent
+                                    issues.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 16px;">
+                            <div class="btn-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>In-App Messages</h4>
+                                <p class="text-muted text-small">Response times typically under 10 minutes.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 16px;">
+                            <div class="btn-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Help Center</h4>
+                                <p class="text-muted text-small">Explore comprehensive guides and troubleshooting tips.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="card animate-on-scroll" onsubmit="event.preventDefault(); window.location.href='404.html';"
+                    style="padding: 40px; transition-delay: 0.1s;">
+                    <h3 style="margin-bottom: 24px;">Send us a message</h3>
+                    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                        <div class="form-group" style="margin: 0;">
+                            <label class="form-label" for="firstName">First name</label>
+                            <input type="text" id="firstName" class="form-control" placeholder="Jane" required>
+                        </div>
+                        <div class="form-group" style="margin: 0;">
+                            <label class="form-label" for="lastName">Last name</label>
+                            <input type="text" id="lastName" class="form-control" placeholder="Doe" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email address</label>
+                        <input type="email" id="email" class="form-control" placeholder="jane@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="topic">Topic</label>
+                        <select id="topic" class="form-control" required
+                            style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'white\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpolyline points=\'6 9 12 15 18 9\'%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 16px center; background-size: 16px; min-height: 50px; appearance: none; -webkit-appearance: none;">
+                            <option value="">Select a topic</option>
+                            <option value="support">Rider Support</option>
+                            <option value="driver">Driver Support</option>
+                            <option value="business">Uber for Business</option>
+                            <option value="press">Press & Media</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea id="message" class="form-control" rows="4" placeholder="How can we help?" required
+                            style="resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">Send
+                        message</button>
+                    <p class="text-small text-muted" style="margin-top: 16px; text-align: center;">By submitting this
+                        form, you agree to our Privacy Policy.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section" style="background-color: var(--color-bg-secondary);">
+            <div class="container" style="max-width: 800px;">
+                <h2 class="animate-on-scroll" style="text-align: center; margin-bottom: 48px;">Frequently Asked
+                    Questions</h2>
+
+                <div class="animate-on-scroll">
+                    <div class="faq-item" onclick="this.classList.toggle('active')">
+                        <div class="faq-question">
+                            I lost an item on my trip. What should I do?
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            The best way to retrieve an item you may have left in a vehicle is to call the driver. You
+                            can do this by going to Your Trips > selecting the trip > Find Lost Item > Contact driver
+                            about a lost item. If your driver doesn't answer, leave a voice message.
+                        </div>
+                    </div>
+
+                    <div class="faq-item" onclick="this.classList.toggle('active')">
+                        <div class="faq-question">
+                            How do I report a safety incident?
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            If you felt unsafe during a trip, please let us know immediately. Go to Help > Trip Issues
+                            and Refunds > I had a safety issue. If you are in immediate danger, use the in-app Emergency
+                            Button to call local authorities.
+                        </div>
+                    </div>
+
+                    <div class="faq-item" onclick="this.classList.toggle('active')">
+                        <div class="faq-question">
+                            Why was my card charged before my trip ended?
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            You may see a pending authorization hold on your payment method for the upfront price of
+                            your trip. This hold ensures there are funds available, but it is not a final charge. It
+                            will be voided if the trip is cancelled.
+                        </div>
+                    </div>
+
+                    <div class="faq-item" onclick="this.classList.toggle('active')">
+                        <div class="faq-question">
+                            How do I change my payment method?
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            Open the app menu and tap 'Wallet' or 'Payment'. From there, you can tap 'Add Payment
+                            Method' to put a new card on file, or select an existing method to delete it or set it as
+                            your default.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Office Locations -->
+        <section class="section">
+            <div class="container">
+                <h2 class="animate-on-scroll" style="text-align: center; margin-bottom: 16px;">Global Offices</h2>
+                <p class="text-lead animate-on-scroll" style="text-align: center; margin-bottom: 48px;">We are
+                    headquartered in San Francisco with major hubs around the world.</p>
+
+                <div class="grid animate-on-scroll"
+                    style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; transition-delay: 0.1s;">
+                    <div class="location-card">
+                        <h4>San Francisco (HQ)</h4>
+                        <p>1515 3rd Street<br>San Francisco, CA 94158<br>United States</p>
+                        <button class="btn btn-secondary route-404" style="padding: 8px 16px; font-size: 0.875rem;">Get
+                            Directions</button>
+                    </div>
+                    <div class="location-card">
+                        <h4>Amsterdam</h4>
+                        <p>Mr. Treublaan 7<br>1097 DP Amsterdam<br>The Netherlands</p>
+                        <button class="btn btn-secondary route-404" style="padding: 8px 16px; font-size: 0.875rem;">Get
+                            Directions</button>
+                    </div>
+                    <div class="location-card">
+                        <h4>London</h4>
+                        <p>Aldgate Tower, 2 Leman St<br>London E1 8FA<br>United Kingdom</p>
+                        <button class="btn btn-secondary route-404" style="padding: 8px 16px; font-size: 0.875rem;">Get
+                            Directions</button>
+                    </div>
+                    <div class="location-card">
+                        <h4>São Paulo</h4>
+                        <p>Edifício Birmann 32<br>Av. Brigadeiro Faria Lima, 3477<br>Brazil</p>
+                        <button class="btn btn-secondary route-404" style="padding: 8px 16px; font-size: 0.875rem;">Get
+                            Directions</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer omitted for brevity, same structure applies -->
+    <script src="script.js"></script>
+    <style>
+        @media (max-width: 900px) {
+            .grid[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</body>
+
+</html>
