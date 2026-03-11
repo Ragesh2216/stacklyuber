@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stacklyuber Home 2 - A fresh perspective">
+    <title>Stacklyuber | A New Way</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Light Theme Override for this specific page */
+        :root {
+            --color-bg-primary: #ffffff;
+            --color-bg-secondary: #f6f6f6;
+            --color-bg-tertiary: #eeeeee;
+            --color-border: #e2e2e2;
+            --color-border-light: #cccccc;
+            --color-text-primary: #000000;
+            --color-text-secondary: #333333;
+            --color-text-muted: #545454;
+            --color-black: #000000;
+            --color-white: #ffffff;
+        }
+
+        .header {
+            background-color: var(--color-bg-primary);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .logo {
+            color: var(--color-text-primary);
+        }
+
+        .nav-link {
+            color: var(--color-text-primary);
+        }
+
+        .nav-link:hover {
+            color: var(--color-text-secondary);
+        }
+
+        .dropdown-btn {
+            color: var(--color-text-primary);
+        }
+
+        .mobile-menu-btn span {
+            background-color: var(--color-text-primary);
+        }
+
+        .footer {
+            background-color: var(--color-bg-secondary);
+            border-top: 1px solid var(--color-border);
+        }
+
+        .footer-logo {
+            color: var(--color-text-primary);
+        }
+
+        .footer-heading {
+            color: var(--color-text-primary);
+        }
+
+        .footer-link,
+        .social-link {
+            color: var(--color-text-muted);
+        }
+
+        .footer-link:hover,
+        .social-link:hover {
+            color: var(--color-text-primary);
+        }
+
+        .card {
+            background-color: var(--color-bg-primary);
+            border: 1px solid var(--color-border);
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            background-color: var(--color-bg-primary);
+        }
+
+        /* Unique home2 layout */
+        .featured-banner {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            padding: 16px;
+            text-align: center;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Navigation - Simplified -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="home2.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm0-4.5c4.142 0 7.5-3.358 7.5-7.5S16.142 4.5 12 4.5 4.5 7.858 4.5 12s3.358 7.5 7.5 7.5z"
+                        fill="currentColor" />
+                </svg>
+                Stacklyuber <span
+                    style="font-size: 0.8rem; font-weight: 400; margin-left: 8px; padding: 2px 6px; background: var(--color-bg-tertiary); border-radius: 4px;">Light</span>
+            </a>
+
+            <!-- Desktop Nav (Simplified) -->
+            <nav class="nav-menu">
+                <div class="dropdown">
+                    <button class="nav-link dropdown-btn active">Home <svg width="16" height="16" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></button>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home 1 (Dark)</a>
+                        <a href="home2.html">Home 2 (Light)</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="dashboard.html" class="nav-link" style="margin-right: 16px;">Dashboard</a>
+                <a href="login.html" class="btn btn-primary route-404">Sign in</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" style="background-color: var(--color-bg-primary);">
+        <nav class="mobile-nav-list">
+            <button class="mobile-dropdown-btn" style="color: var(--color-text-primary);"
+                onclick="this.nextElementSibling.classList.toggle('show')">Home <svg width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg></button>
+            <div class="mobile-dropdown-content">
+                <a href="index.html">Home 1 (Dark)</a>
+                <a href="home2.html">Home 2 (Light)</a>
+            </div>
+            <a href="dashboard.html" class="mobile-nav-link" style="color: var(--color-text-primary);">Dashboard</a>
+            <a href="login.html" class="mobile-nav-link" style="color: var(--color-text-primary);">Sign in</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="featured-banner">
+            Experience our new minimalist interface. Fast, light, and focused on you.
+        </div>
+
+        <!-- Hero Section -->
+        <section class="section" style="padding-top: 80px; padding-bottom: 80px;">
+            <div class="container grid" style="grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
+                <div>
+                    <h1 class="animate-on-scroll" style="font-size: 3.5rem; letter-spacing: -0.02em;">Reimagining your
+                        commute.</h1>
+                    <p class="text-lead animate-on-scroll"
+                        style="margin-top: 24px; margin-bottom: 40px; transition-delay: 0.1s;">
+                        We are streamlining the global infrastructure. Experience the power of our real-time network
+                        designed to connect the physical and digital worlds effortlessly.
+                    </p>
+                    <div class="flex animate-on-scroll" style="gap: 16px; flex-wrap: wrap; transition-delay: 0.2s;">
+                        <a href="dashboard.html" class="btn btn-primary" style="padding: 16px 32px;">Go to Dashboard</a>
+                        <a href="login.html" class="btn btn-secondary"
+                            style="background-color: var(--color-bg-secondary); color: var(--color-text-primary);">Sign
+                            in to get started</a>
+                    </div>
+                </div>
+                <!-- WebP image 1 (<100kb expected from the fetch script) -->
+                <div class="animate-on-scroll"
+                    style="transition-delay: 0.3s; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-xl);">
+                    <img src="images/home2_img1.webp" alt="Modern city architecture"
+                        style="width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 4/3;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions Grid -->
+        <section class="section" style="background-color: var(--color-bg-secondary);">
+            <div class="container">
+                <div style="text-align: center; max-width: 600px; margin: 0 auto 64px auto;">
+                    <h2 class="animate-on-scroll">Simplified solutions.</h2>
+                    <p class="text-muted animate-on-scroll" style="margin-top: 16px; transition-delay: 0.1s;">Access all
+                        your tools in one place with a clean, distraction-free environment tailored for efficiency.</p>
+                </div>
+
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
+                    <!-- Card 1 -->
+                    <div class="card animate-on-scroll" style="padding: 32px;">
+                        <img src="images/home2_img2.webp" alt="Work tools"
+                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 24px;">
+                        <h3>Powerful Dashboard</h3>
+                        <p class="text-muted" style="margin: 16px 0 24px 0;">Track your spending, manage your rides, and
+                            review recent activity seamlessly.</p>
+                        <a href="dashboard.html" class="nav-link"
+                            style="color: var(--color-accent); font-weight: 600; padding: 0;">Explore Dashboard
+                            &rarr;</a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card animate-on-scroll" style="transition-delay: 0.1s; padding: 32px;">
+                        <img src="images/home2_img3.webp" alt="Cityscape"
+                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 24px;">
+                        <h3>Global Network</h3>
+                        <p class="text-muted" style="margin: 16px 0 24px 0;">Access our services in over 10,000 cities
+                            worldwide. Wherever you are heading, we’re there.</p>
+                        <a href="404.html" class="nav-link route-404"
+                            style="color: var(--color-accent); font-weight: 600; padding: 0;">View coverage &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA -->
+        <section class="section" style="padding: 120px 0; text-align: center;">
+            <div class="container">
+                <h2 class="animate-on-scroll" style="font-size: 3rem; margin-bottom: 32px;">Ready to explore?</h2>
+                <a href="login.html" class="btn btn-primary animate-on-scroll"
+                    style="font-size: 1.25rem; padding: 16px 40px; transition-delay: 0.1s;">Sign in securely</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container container-padding text-center">
+            <p class="text-muted">&copy; 2026 Stacklyuber Technologies Inc. (Light Theme Preview)</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Adjust dropdown logic for the new light nav
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            const btn = dropdown.querySelector('.dropdown-btn');
+            const content = dropdown.querySelector('.dropdown-content');
+
+            // For desktop hover intent
+            dropdown.addEventListener('mouseenter', () => {
+                if (window.innerWidth > 768) {
+                    content.style.display = 'block';
+                    setTimeout(() => {
+                        content.style.opacity = '1';
+                        content.style.transform = 'translateY(0)';
+                    }, 10);
+                }
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+                if (window.innerWidth > 768) {
+                    content.style.opacity = '0';
+                    content.style.transform = 'translateY(10px)';
+                    setTimeout(() => {
+                        content.style.display = 'none';
+                    }, 300); // match transition duration
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

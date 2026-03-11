@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Uber</title>
+    <title>Services | Stacklyuber</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,11 +18,17 @@
                         d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm0-4.5c4.142 0 7.5-3.358 7.5-7.5S16.142 4.5 12 4.5 4.5 7.858 4.5 12s3.358 7.5 7.5 7.5z"
                         fill="currentColor" />
                 </svg>
-                Uber
+                Stacklyuber
             </a>
-            <!-- Desktop Nav -->
+                        <!-- Desktop Nav -->
             <nav class="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <button class="nav-link dropdown-btn">Home <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home 1</a>
+                        <a href="home2.html">Home 2</a>
+                    </div>
+                </div>
                 <a href="services.html" class="nav-link active">Services</a>
                 <a href="about.html" class="nav-link">About Us</a>
                 <a href="related.html" class="nav-link">Related</a>
@@ -41,8 +47,12 @@
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay">
-        <nav class="mobile-nav-list">
-            <a href="index.html" class="mobile-nav-link">Home</a>
+                <nav class="mobile-nav-list">
+            <button class="mobile-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show')">Home <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+            <div class="mobile-dropdown-content">
+                <a href="index.html">Home 1</a>
+                <a href="home2.html">Home 2</a>
+            </div>
             <a href="services.html" class="mobile-nav-link">Services</a>
             <a href="about.html" class="mobile-nav-link">About Us</a>
             <a href="related.html" class="mobile-nav-link">Related</a>
@@ -93,12 +103,12 @@
                     <div class="card animate-on-scroll" style="display: flex; flex-direction: column;">
                         <span class="badge" style="align-self: flex-start; margin-bottom: 16px;">Personal</span>
                         <div class="card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800"
-                                alt="Uber Ride">
+                            <img src="images/site_img_6.webp"
+                                alt="Stacklyuber Ride">
                         </div>
                         <h3>Rideshare</h3>
                         <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">Request a ride, hop in, and go.
-                            Choose from everyday options like UberX to premium cars like Uber Black. Features include
+                            Choose from everyday options like StacklyuberX to premium cars like Stacklyuber Black. Features include
                             up-front pricing and real-time GPS tracking.</p>
                         <ul style="list-style: none; margin-bottom: 24px; padding: 0;">
                             <li style="margin-bottom: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">✓
@@ -117,8 +127,8 @@
                         <span class="badge" style="align-self: flex-start; margin-bottom: 16px;">Personal /
                             Business</span>
                         <div class="card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1628191010210-a59de33e5941?auto=format&fit=crop&q=80&w=800"
-                                alt="Uber Delivery">
+                            <img src="images/site_img_9.webp"
+                                alt="Stacklyuber Delivery">
                         </div>
                         <h3>Deliveries</h3>
                         <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">Order from your favorite local
@@ -140,10 +150,10 @@
                         <span class="badge"
                             style="align-self: flex-start; margin-bottom: 16px; background-color: var(--color-accent);">Business</span>
                         <div class="card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800"
-                                alt="Uber Business">
+                            <img src="images/site_img_7.webp"
+                                alt="Stacklyuber Business">
                         </div>
-                        <h3>Uber for Business</h3>
+                        <h3>Stacklyuber for Business</h3>
                         <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">A powerful platform to manage global
                             rides, meals, and local deliveries for companies of any size. Track expenses and set
                             policies easily.</p>
@@ -164,8 +174,8 @@
                         style="transition-delay: 0.3s; display: flex; flex-direction: column;">
                         <span class="badge" style="align-self: flex-start; margin-bottom: 16px;">Personal</span>
                         <div class="card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1544839846-f027419103e2?auto=format&fit=crop&q=80&w=800"
-                                alt="Uber Transit">
+                            <img src="images/site_img_8.webp"
+                                alt="Stacklyuber Transit">
                         </div>
                         <h3>Public Transit</h3>
                         <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">Plan your transit journey, view live
@@ -187,10 +197,10 @@
                         <span class="badge"
                             style="align-self: flex-start; margin-bottom: 16px; background-color: var(--color-accent);">Logistics</span>
                         <div class="card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1586528116311-ad8ed7c80a71?auto=format&fit=crop&q=80&w=800"
-                                alt="Uber Freight">
+                            <img src="images/site_img_10.webp"
+                                alt="Stacklyuber Freight">
                         </div>
-                        <h3>Uber Freight</h3>
+                        <h3>Stacklyuber Freight</h3>
                         <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">Simplifying logistics. We match
                             shippers with carriers, providing transparent pricing, fast payments, and facility ratings.
                         </p>
@@ -212,10 +222,10 @@
                             style="align-self: flex-start; margin-bottom: 16px; background-color: var(--color-accent);">Business
                             / Healthcare</span>
                         <div class="card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1538108149393-cebb47cdf504?auto=format&fit=crop&q=80&w=800"
-                                alt="Uber Health">
+                            <img src="images/site_img_11.webp"
+                                alt="Stacklyuber Health">
                         </div>
-                        <h3>Uber Health</h3>
+                        <h3>Stacklyuber Health</h3>
                         <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">A HIPAA-compliant technology
                             solution designed for healthcare organizations to arrange rides and deliveries for patients.
                         </p>
@@ -253,7 +263,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <span class="footer-logo">Uber</span>
+                    <span class="footer-logo">Stacklyuber</span>
                     <p class="text-muted">Visit Help Center</p>
                 </div>
                 <!-- Adding essential links back -->

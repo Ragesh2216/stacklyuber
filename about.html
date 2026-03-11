@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Uber</title>
+    <title>About Us | Stacklyuber</title>
     <link rel="stylesheet" href="style.css">
     <style>
         .timeline-container {
@@ -118,10 +118,16 @@
                         d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm0-4.5c4.142 0 7.5-3.358 7.5-7.5S16.142 4.5 12 4.5 4.5 7.858 4.5 12s3.358 7.5 7.5 7.5z"
                         fill="currentColor" />
                 </svg>
-                Uber
+                Stacklyuber
             </a>
             <nav class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <button class="nav-link dropdown-btn">Home 2 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <div class="dropdown-content">
+                        <a href="home2.html">Home 2 Page</a>
+                    </div>
+                </div>
                 <a href="services.html" class="nav-link">Services</a>
                 <a href="about.html" class="nav-link active">About Us</a>
                 <a href="related.html" class="nav-link">Related</a>
@@ -139,8 +145,12 @@
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay">
-        <nav class="mobile-nav-list">
-            <a href="index.html" class="mobile-nav-link">Home</a>
+                <nav class="mobile-nav-list">
+            <button class="mobile-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show')">Home <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+            <div class="mobile-dropdown-content">
+                <a href="index.html">Home 1</a>
+                <a href="home2.html">Home 2</a>
+            </div>
             <a href="services.html" class="mobile-nav-link">Services</a>
             <a href="about.html" class="mobile-nav-link">About Us</a>
             <a href="related.html" class="mobile-nav-link">Related</a>
@@ -195,8 +205,8 @@
         <!-- Image Banner -->
         <section class="section">
             <div class="container animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1542314831-c6a47ea20be8?auto=format&fit=crop&q=80&w=1200"
-                    alt="Uber corporate culture"
+                <img src="images/site_img_1.webp"
+                    alt="Stacklyuber corporate culture"
                     style="width: 100%; border-radius: var(--border-radius-lg); max-height: 500px; object-fit: cover;">
             </div>
         </section>
@@ -209,7 +219,7 @@
                     <div class="card animate-on-scroll">
                         <div style="font-size: 2rem; margin-bottom: 16px;">🌍</div>
                         <h3>Sustainability</h3>
-                        <p class="text-muted" style="margin-top: 16px;">Uber is committing to becoming a fully electric,
+                        <p class="text-muted" style="margin-top: 16px;">Stacklyuber is committing to becoming a fully electric,
                             zero-emission platform by 2040, with 100% of rides taking place in zero-emission vehicles,
                             on public transit, or with micro-mobility. We believe in building a greener future for every
                             city we operate in.</p>
@@ -252,7 +262,7 @@
                         <div class="timeline-content">
                             <span class="timeline-date">2009</span>
                             <h4>The beginning</h4>
-                            <p class="text-muted" style="margin-top: 8px;">Uber is founded by Travis Kalanick and
+                            <p class="text-muted" style="margin-top: 8px;">Stacklyuber is founded by Travis Kalanick and
                                 Garrett Camp after they couldn't find a cab in Paris.</p>
                         </div>
                     </div>
@@ -260,22 +270,22 @@
                         <div class="timeline-content">
                             <span class="timeline-date">2010</span>
                             <h4>First ride</h4>
-                            <p class="text-muted" style="margin-top: 8px;">The first Uber ride is requested in San
+                            <p class="text-muted" style="margin-top: 8px;">The first Stacklyuber ride is requested in San
                                 Francisco, offering an exclusive black car service.</p>
                         </div>
                     </div>
                     <div class="timeline-item timeline-left">
                         <div class="timeline-content">
                             <span class="timeline-date">2012</span>
-                            <h4>UberX Launched</h4>
-                            <p class="text-muted" style="margin-top: 8px;">We introduced UberX, allowing people to
+                            <h4>StacklyuberX Launched</h4>
+                            <p class="text-muted" style="margin-top: 8px;">We introduced StacklyuberX, allowing people to
                                 provide rides using their own personal vehicles, revolutionizing the gig economy.</p>
                         </div>
                     </div>
                     <div class="timeline-item timeline-right">
                         <div class="timeline-content">
                             <span class="timeline-date">2014</span>
-                            <h4>Uber Eats arrives</h4>
+                            <h4>Stacklyuber Eats arrives</h4>
                             <p class="text-muted" style="margin-top: 8px;">We expanded from moving people to moving food
                                 with the launch of our delivery service network.</p>
                         </div>
@@ -284,8 +294,8 @@
                         <div class="timeline-content">
                             <span class="timeline-date">2019</span>
                             <h4>Going Public</h4>
-                            <p class="text-muted" style="margin-top: 8px;">Uber becomes a publicly traded company on the
-                                New York Stock Exchange under the ticker UBER.</p>
+                            <p class="text-muted" style="margin-top: 8px;">Stacklyuber becomes a publicly traded company on the
+                                New York Stock Exchange under the ticker STACKLYUBER.</p>
                         </div>
                     </div>
                     <div class="timeline-item timeline-right">
@@ -306,25 +316,25 @@
                 <h2 class="animate-on-scroll" style="margin-bottom: 48px;">Executive Leadership</h2>
                 <div class="team-grid animate-on-scroll">
                     <div class="team-member">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=300"
+                        <img src="images/site_img_2.webp"
                             alt="Dara Khosrowshahi mockup">
                         <h4 style="margin-bottom: 4px;">Dara K.</h4>
                         <p class="text-muted text-small">Chief Executive Officer</p>
                     </div>
                     <div class="team-member">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300"
+                        <img src="images/site_img_3.webp"
                             alt="Executive 2">
                         <h4 style="margin-bottom: 4px;">Nelson C.</h4>
                         <p class="text-muted text-small">Chief Financial Officer</p>
                     </div>
                     <div class="team-member">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300"
+                        <img src="images/site_img_4.webp"
                             alt="Executive 3">
                         <h4 style="margin-bottom: 4px;">Tony W.</h4>
                         <p class="text-muted text-small">Chief Legal Officer</p>
                     </div>
                     <div class="team-member">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=300"
+                        <img src="images/site_img_5.webp"
                             alt="Executive 4">
                         <h4 style="margin-bottom: 4px;">Nikki K.</h4>
                         <p class="text-muted text-small">Chief People Officer</p>

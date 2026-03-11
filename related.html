@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Newsroom & Related | Uber</title>
+    <title>Newsroom & Related | Stacklyuber</title>
     <link rel="stylesheet" href="style.css">
     <style>
         .news-filter {
@@ -105,10 +105,16 @@
                         d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm0-4.5c4.142 0 7.5-3.358 7.5-7.5S16.142 4.5 12 4.5 4.5 7.858 4.5 12s3.358 7.5 7.5 7.5z"
                         fill="currentColor" />
                 </svg>
-                Uber
+                Stacklyuber
             </a>
             <nav class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <button class="nav-link dropdown-btn">Home 2 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <div class="dropdown-content">
+                        <a href="home2.html">Home 2 Page</a>
+                    </div>
+                </div>
                 <a href="services.html" class="nav-link">Services</a>
                 <a href="about.html" class="nav-link">About Us</a>
                 <a href="related.html" class="nav-link active">Related</a>
@@ -126,8 +132,12 @@
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay">
-        <nav class="mobile-nav-list">
-            <a href="index.html" class="mobile-nav-link">Home</a>
+                <nav class="mobile-nav-list">
+            <button class="mobile-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show')">Home <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+            <div class="mobile-dropdown-content">
+                <a href="index.html">Home 1</a>
+                <a href="home2.html">Home 2</a>
+            </div>
             <a href="services.html" class="mobile-nav-link">Services</a>
             <a href="about.html" class="mobile-nav-link">About Us</a>
             <a href="related.html" class="mobile-nav-link">Related</a>
@@ -143,7 +153,7 @@
     <main class="main-content">
         <section class="section" style="padding-top: 120px;">
             <div class="container">
-                <h1 class="animate-on-scroll">Uber Newsroom</h1>
+                <h1 class="animate-on-scroll">Stacklyuber Newsroom</h1>
                 <p class="text-lead animate-on-scroll" style="margin-top: 16px;">The latest news, announcements, and
                     stories from across the globe.</p>
 
@@ -160,12 +170,12 @@
                     <!-- Featured Article -->
                     <div class="news-featured animate-on-scroll">
                         <div class="card-img-wrapper" style="border-radius: var(--border-radius-lg);">
-                            <img src="https://images.unsplash.com/photo-1542314831-c6a47ea20be8?auto=format&fit=crop&q=80&w=1200"
-                                alt="Uber corporate culture" style="object-fit: cover;">
+                            <img src="images/site_img_1.webp"
+                                alt="Stacklyuber corporate culture" style="object-fit: cover;">
                         </div>
                         <div>
                             <span class="badge" style="margin-bottom: 24px;">Company Profile</span>
-                            <h2>Uber Commits to Zero-Emissions by 2040</h2>
+                            <h2>Stacklyuber Commits to Zero-Emissions by 2040</h2>
                             <p class="text-muted" style="margin: 24px 0;">We are making a global commitment to become a
                                 fully electric, zero-emission platform. Every ride, every delivery, contributing to
                                 cleaner cities and healthier communities worldwide.</p>
@@ -183,8 +193,8 @@
                         <span class="badge" style="align-self: flex-start; margin-bottom: 16px;">Products &
                             Services</span>
                         <div class="card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800"
-                                alt="Uber App Feature">
+                            <img src="images/site_img_6.webp"
+                                alt="Stacklyuber App Feature">
                         </div>
                         <h3 style="margin: 16px 0;">New Safety Features Rolled Out Globally</h3>
                         <p class="text-muted" style="margin-bottom: 24px; flex-grow: 1;">Enhanced RideCheck and Audio
@@ -200,7 +210,7 @@
                         <span class="badge"
                             style="align-self: flex-start; margin-bottom: 16px; background-color: var(--color-accent);">Innovation</span>
                         <div class="card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800"
+                            <img src="images/site_img_7.webp"
                                 alt="Autonomous driving tech">
                         </div>
                         <h3 style="margin: 16px 0;">The Future of Autonomous Freight</h3>
@@ -216,7 +226,7 @@
                         <span class="badge" style="align-self: flex-start; margin-bottom: 16px;">Corporate Social
                             Responsibility</span>
                         <div class="card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1544839846-f027419103e2?auto=format&fit=crop&q=80&w=800"
+                            <img src="images/site_img_8.webp"
                                 alt="Community support">
                         </div>
                         <h3 style="margin: 16px 0;">Supporting Local Restaurants with Eats</h3>
