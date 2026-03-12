@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Stacklyuber</title>
+    <title>Services | Stackly</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,12 +18,16 @@
                         d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm0-4.5c4.142 0 7.5-3.358 7.5-7.5S16.142 4.5 12 4.5 4.5 7.858 4.5 12s3.358 7.5 7.5 7.5z"
                         fill="currentColor" />
                 </svg>
-                Stacklyuber
+                Stackly
             </a>
-                        <!-- Desktop Nav -->
+            <!-- Desktop Nav -->
             <nav class="nav-menu">
                 <div class="dropdown">
-                    <button class="nav-link dropdown-btn">Home <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <button class="nav-link dropdown-btn">Home <svg width="16" height="16" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></button>
                     <div class="dropdown-content">
                         <a href="index.html">Home 1</a>
                         <a href="home2.html">Home 2</a>
@@ -47,8 +51,11 @@
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay">
-                <nav class="mobile-nav-list">
-            <button class="mobile-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show')">Home <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+        <nav class="mobile-nav-list">
+            <button class="mobile-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show')">Home <svg
+                    width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg></button>
             <div class="mobile-dropdown-content">
                 <a href="index.html">Home 1</a>
                 <a href="home2.html">Home 2</a>
@@ -99,16 +106,38 @@
         <section class="section">
             <div class="container">
                 <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
-                    <!-- Ride -->
+                    <!-- Bike -->
                     <div class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+                        <span class="badge" style="align-self: flex-start; margin-bottom: 16px;">Personal /
+                            Delivery</span>
+                        <div class="card-img-wrapper">
+                            <img src="images/bike.webp" alt="Stackly Bike">
+                        </div>
+                        <h3>Stackly Bike</h3>
+                        <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">Zip through traffic with Stackly
+                            Bike. Fast, efficient, and perfect for short trips or quick deliveries.</p>
+                        <ul style="list-style: none; margin-bottom: 24px; padding: 0;">
+                            <li style="margin-bottom: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">✓
+                                Fastest urban commute</li>
+                            <li style="margin-bottom: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">✓
+                                Ideal for small parcels</li>
+                            <li style="font-size: 0.875rem; color: var(--color-text-secondary);">✓ Cost-effective
+                                pricing</li>
+                        </ul>
+                        <button class="btn btn-secondary route-404" style="width: 100%;">Explore Bike Options</button>
+                    </div>
+
+                    <!-- Ride -->
+                    <div class="card animate-on-scroll"
+                        style="transition-delay: 0.1s; display: flex; flex-direction: column;">
                         <span class="badge" style="align-self: flex-start; margin-bottom: 16px;">Personal</span>
                         <div class="card-img-wrapper">
-                            <img src="images/site_img_6.webp"
-                                alt="Stacklyuber Ride">
+                            <img src="images/site_img_6.webp" alt="Stackly Ride">
                         </div>
                         <h3>Rideshare</h3>
                         <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">Request a ride, hop in, and go.
-                            Choose from everyday options like StacklyuberX to premium cars like Stacklyuber Black. Features include
+                            Choose from everyday options like StacklyX to premium cars like Stackly Black. Features
+                            include
                             up-front pricing and real-time GPS tracking.</p>
                         <ul style="list-style: none; margin-bottom: 24px; padding: 0;">
                             <li style="margin-bottom: 8px; font-size: 0.875rem; color: var(--color-text-secondary);">✓
@@ -127,8 +156,7 @@
                         <span class="badge" style="align-self: flex-start; margin-bottom: 16px;">Personal /
                             Business</span>
                         <div class="card-img-wrapper">
-                            <img src="images/site_img_9.webp"
-                                alt="Stacklyuber Delivery">
+                            <img src="images/site_img_9.webp" alt="Stackly Delivery">
                         </div>
                         <h3>Deliveries</h3>
                         <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">Order from your favorite local
@@ -150,10 +178,9 @@
                         <span class="badge"
                             style="align-self: flex-start; margin-bottom: 16px; background-color: var(--color-accent);">Business</span>
                         <div class="card-img-wrapper">
-                            <img src="images/site_img_7.webp"
-                                alt="Stacklyuber Business">
+                            <img src="images/site_img_7.webp" alt="Stackly Business">
                         </div>
-                        <h3>Stacklyuber for Business</h3>
+                        <h3>Stackly for Business</h3>
                         <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">A powerful platform to manage global
                             rides, meals, and local deliveries for companies of any size. Track expenses and set
                             policies easily.</p>
@@ -174,8 +201,7 @@
                         style="transition-delay: 0.3s; display: flex; flex-direction: column;">
                         <span class="badge" style="align-self: flex-start; margin-bottom: 16px;">Personal</span>
                         <div class="card-img-wrapper">
-                            <img src="images/site_img_8.webp"
-                                alt="Stacklyuber Transit">
+                            <img src="images/site_img_8.webp" alt="Stackly Transit">
                         </div>
                         <h3>Public Transit</h3>
                         <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">Plan your transit journey, view live
@@ -197,10 +223,9 @@
                         <span class="badge"
                             style="align-self: flex-start; margin-bottom: 16px; background-color: var(--color-accent);">Logistics</span>
                         <div class="card-img-wrapper">
-                            <img src="images/site_img_10.webp"
-                                alt="Stacklyuber Freight">
+                            <img src="images/site_img_10.webp" alt="Stackly Freight">
                         </div>
-                        <h3>Stacklyuber Freight</h3>
+                        <h3>Stackly Freight</h3>
                         <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">Simplifying logistics. We match
                             shippers with carriers, providing transparent pricing, fast payments, and facility ratings.
                         </p>
@@ -222,10 +247,9 @@
                             style="align-self: flex-start; margin-bottom: 16px; background-color: var(--color-accent);">Business
                             / Healthcare</span>
                         <div class="card-img-wrapper">
-                            <img src="images/site_img_11.webp"
-                                alt="Stacklyuber Health">
+                            <img src="images/site_img_11.webp" alt="Stackly Health">
                         </div>
-                        <h3>Stacklyuber Health</h3>
+                        <h3>Stackly Health</h3>
                         <p class="text-muted" style="margin: 16px 0; flex-grow: 1;">A HIPAA-compliant technology
                             solution designed for healthcare organizations to arrange rides and deliveries for patients.
                         </p>
@@ -263,7 +287,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <span class="footer-logo">Stacklyuber</span>
+                    <span class="footer-logo">Stackly</span>
                     <p class="text-muted">Visit Help Center</p>
                 </div>
                 <!-- Adding essential links back -->
