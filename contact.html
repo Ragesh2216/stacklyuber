@@ -64,22 +64,20 @@
     <header class="header">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm0-4.5c4.142 0 7.5-3.358 7.5-7.5S16.142 4.5 12 4.5 4.5 7.858 4.5 12s3.358 7.5 7.5 7.5z"
-                        fill="currentColor" />
-                </svg>
-                Stackly
+                <img src="logo.webp" alt="Stackly Logo" style="height: 32px; width: auto; margin-right: 8px;">
             </a>
             <nav class="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
                 <div class="dropdown">
-                    <button class="nav-link dropdown-btn">Home 2 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <button class="nav-link dropdown-btn">Home <svg width="16" height="16" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></button>
                     <div class="dropdown-content">
-                        <a href="home2.html">Home 2 Page</a>
+                        <a href="home2.html">Home 2</a>
                     </div>
                 </div>
-                <a href="services.html" class="nav-link">Services</a>
+                <a href="services.html" class="nav-link ">Services</a>
                 <a href="about.html" class="nav-link">About Us</a>
                 <a href="related.html" class="nav-link">Related</a>
                 <a href="contact.html" class="nav-link active">Contact</a>
@@ -88,25 +86,27 @@
                 <a href="login.html" class="nav-link">Log in</a>
                 <a href="login.html" class="btn btn-primary route-404">Sign up</a>
             </div>
+            <!-- Mobile Menu Toggle -->
             <button class="mobile-menu-btn" aria-label="Toggle Navigation">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </header>
 
-    <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay">
-                <nav class="mobile-nav-list">
-            <button class="mobile-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show')">Home <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+        <nav class="mobile-nav-list">
+            <button class="mobile-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show')">Home <svg
+                    width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg></button>
             <div class="mobile-dropdown-content">
-                <a href="index.html">Home 1</a>
+               
                 <a href="home2.html">Home 2</a>
             </div>
             <a href="services.html" class="mobile-nav-link">Services</a>
             <a href="about.html" class="mobile-nav-link">About Us</a>
             <a href="related.html" class="mobile-nav-link">Related</a>
             <a href="contact.html" class="mobile-nav-link">Contact</a>
-            <a href="dashboard.html" class="mobile-nav-link">Dashboard Demo</a>
         </nav>
         <div class="mobile-actions">
             <a href="login.html" class="btn btn-secondary" style="width: 100%;">Log in</a>
@@ -287,16 +287,26 @@
         <!-- Office Locations -->
         <section class="section">
             <div class="container">
-                <h2 class="animate-on-scroll" style="text-align: center; margin-bottom: 16px;">Global Offices</h2>
-                <p class="text-lead animate-on-scroll" style="text-align: center; margin-bottom: 48px;">We are
-                    headquartered in San Francisco with major hubs around the world.</p>
+                <h2 class="animate-on-scroll" style="text-align: center; margin-bottom: 16px;">Our Locations</h2>
+                <p class="text-lead animate-on-scroll" style="text-align: center; margin-bottom: 48px;">Headquartered in
+                    Salem, with connections across the globe.</p>
+
+                <!-- Stackly Salem Map Embed -->
+                <div class="animate-on-scroll"
+                    style="margin-bottom: 48px; border-radius: var(--border-radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250334.80556094676!2d78.00552787704176!3d11.653896593466185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babce5e3ef2472d%3A0xa1941604085b43de!2sSalem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700662242131!5m2!1sen!2sin"
+                        width="100%" height="400" style="border:0; display: block;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
 
                 <div class="grid animate-on-scroll"
                     style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; transition-delay: 0.1s;">
-                    <div class="location-card">
-                        <h4>San Francisco (HQ)</h4>
-                        <p>1515 3rd Street<br>San Francisco, CA 94158<br>United States</p>
-                        <button class="btn btn-secondary route-404" style="padding: 8px 16px; font-size: 0.875rem;">Get
+                    <div class="location-card" style="border: 2px solid var(--color-accent);">
+                        <h4>Stackly Salem (HQ)</h4>
+                        <p>Stackly Tech Campus<br>Salem, Tamil Nadu<br>India</p>
+                        <button class="btn btn-primary route-404"
+                            style="padding: 8px 16px; font-size: 0.875rem; width: 100%;">Get
                             Directions</button>
                     </div>
                     <div class="location-card">

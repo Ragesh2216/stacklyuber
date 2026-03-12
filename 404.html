@@ -6,61 +6,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found | Stackly</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .page-404 {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page-404-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            padding-top: var(--header-height);
+            text-align: center;
+        }
+
+        .page-404-inner {
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .page-404-code {
+            font-size: clamp(5rem, 20vw, 8rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            color: var(--color-accent);
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        .float-icon {
+            animation: float 3s ease-in-out infinite;
+            display: inline-block;
+        }
+    </style>
 </head>
 
-<body style="height: 100vh; display: flex; flex-direction: column; background-color: var(--color-bg-primary);">
-    <header class="header" style="position: relative; background: transparent; backdrop-filter: none; border: none;">
-        <div class="container nav-container" style="justify-content: flex-start;">
+<body class="page-404">
+    <!-- Full Standard Navbar -->
+    <header class="header">
+        <div class="container nav-container">
             <a href="index.html" class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm0-4.5c4.142 0 7.5-3.358 7.5-7.5S16.142 4.5 12 4.5 4.5 7.858 4.5 12s3.358 7.5 7.5 7.5z"
-                        fill="currentColor" />
-                </svg>
-                Stackly
+                <img src="logo.webp" alt="Stackly Logo" style="height: 32px; width: auto;">
             </a>
+            <nav class="nav-menu">
+                <div class="dropdown">
+                    <button class="nav-link dropdown-btn">Home
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="home2.html">Home 2</a>
+                    </div>
+                </div>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="related.html" class="nav-link">Related</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="nav-link">Log in</a>
+                <a href="login.html" class="btn btn-primary">Sign up</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
-    <main class="main-content flex-col items-center justify-center" style="padding: 0 24px;">
-        <div style="text-align: center; max-width: 500px;">
-            <!-- Simple animated routing icon -->
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round"
-                style="margin-bottom: 32px; color: var(--color-accent); animation: float 3s ease-in-out infinite;">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="8" x2="12" y2="12"></line>
-                <line x1="12" y1="16" x2="12.01" y2="16"></line>
-            </svg>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-nav-list">
+            <button class="mobile-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show')">Home
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="mobile-dropdown-content">
+                <a href="home2.html">Home 2</a>
+            </div>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <a href="about.html" class="mobile-nav-link">About Us</a>
+            <a href="related.html" class="mobile-nav-link">Related</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+        <div class="mobile-actions">
+            <a href="login.html" class="btn btn-secondary" style="width: 100%;">Log in</a>
+            <a href="login.html" class="btn btn-primary" style="width: 100%;">Sign up</a>
+        </div>
+    </div>
 
-            <h1 style="margin-bottom: 16px;">This route doesn't exist yet</h1>
+    <!-- 404 Content — centered in remaining space -->
+    <main class="page-404-content">
+        <div class="page-404-inner">
+            <div class="float-icon">
+                <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    style="color: var(--color-accent); margin-bottom: 24px;">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+            </div>
+            <div class="page-404-code">404</div>
+            <h1 style="margin-bottom: 16px; font-size: 1.75rem;">This route doesn't exist yet</h1>
             <p class="text-lead" style="margin-bottom: 40px;">
                 You've clicked on a mockup link. In a full application, this would take you to the requested feature or
                 page.
             </p>
-
-            <div class="flex items-center justify-center" style="gap: 16px;">
-                <button onclick="window.history.back()" class="btn btn-secondary">Go back</button>
+            <div class="flex items-center justify-center" style="gap: 16px; flex-wrap: wrap;">
+                <button onclick="window.history.back()" class="btn btn-secondary">&#8592; Go back</button>
                 <a href="index.html" class="btn btn-primary">Return Home</a>
             </div>
         </div>
     </main>
 
-    <style>
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
-        }
-    </style>
+    <script src="script.js"></script>
 </body>
 
 </html>

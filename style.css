@@ -382,23 +382,22 @@ h4,
     left: 0;
     width: 100%;
     height: var(--header-height);
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--glass-border);
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
     z-index: 1000;
     display: flex;
     align-items: center;
-    transition: transform var(--transition-normal);
+    transition: transform var(--transition-normal), background-color var(--transition-normal);
 }
 
-.header.scrolled-down {
-    transform: translateY(-100%);
+.header .logo {
+    color: var(--color-black);
 }
 
 .header.scrolled-up {
     transform: translateY(0);
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow-sm);
 }
 
 .nav-container {
@@ -498,7 +497,7 @@ h4,
     width: 100%;
     background: transparent;
     border: none;
-    color: var(--color-white);
+    color: var(--color-black);
     font-size: 1.5rem;
     font-weight: 600;
     text-align: left;
@@ -529,10 +528,10 @@ h4,
 .nav-link {
     font-weight: 500;
     font-size: 0.9375rem;
-    color: var(--color-text-primary);
+    color: var(--color-black);
     position: relative;
     padding: 8px 0;
-    opacity: 0.9;
+    opacity: 0.7;
 }
 
 .nav-link:hover,
@@ -547,7 +546,7 @@ h4,
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--color-white);
+    background-color: var(--color-black);
     transition: width var(--transition-normal);
 }
 
@@ -591,7 +590,7 @@ h4,
     display: block;
     width: 100%;
     height: 2px;
-    background-color: var(--color-white);
+    background-color: var(--color-black);
     border-radius: 2px;
     transition: transform var(--transition-normal), opacity var(--transition-fast);
     transform-origin: left center;
@@ -616,7 +615,7 @@ h4,
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: var(--color-bg-primary);
+    background-color: var(--color-white);
     z-index: 1001;
     display: flex;
     flex-direction: column;
@@ -641,6 +640,7 @@ h4,
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: -0.02em;
+    color: var(--color-black);
 }
 
 .mobile-actions {
@@ -754,7 +754,7 @@ h4,
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: var(--color-black);
+    background-color: var(--color-white);
     z-index: 9999;
     display: flex;
     justify-content: center;

@@ -96,26 +96,20 @@
     <header class="header">
         <div class="container nav-container">
             <a href="home2.html" class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm0-4.5c4.142 0 7.5-3.358 7.5-7.5S16.142 4.5 12 4.5 4.5 7.858 4.5 12s3.358 7.5 7.5 7.5z"
-                        fill="currentColor" />
-                </svg>
-                Stackly <span
-                    style="font-size: 0.8rem; font-weight: 400; margin-left: 8px; padding: 2px 6px; background: var(--color-bg-tertiary); border-radius: 4px;">Light</span>
+                <img src="logo.webp" alt="Stackly Logo" style="height: 32px; width: auto; margin-right: 8px;">
             </a>
 
             <!-- Desktop Nav (Simplified) -->
             <nav class="nav-menu">
                 <div class="dropdown">
-                    <button class="nav-link dropdown-btn active">Home <svg width="16" height="16" viewBox="0 0 24 24"
+                    <button class="nav-link dropdown-btn active">Home2 <svg width="16" height="16" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg></button>
                     <div class="dropdown-content">
-                        <a href="index.html">Home 1 (Dark)</a>
-                        <a href="home2.html">Home 2 (Light)</a>
+                        <a href="index.html">Home </a>
+
                     </div>
                 </div>
             </nav>
@@ -136,13 +130,13 @@
     <div class="mobile-menu-overlay" style="background-color: var(--color-bg-primary);">
         <nav class="mobile-nav-list">
             <button class="mobile-dropdown-btn" style="color: var(--color-text-primary);"
-                onclick="this.nextElementSibling.classList.toggle('show')">Home <svg width="20" height="20"
+                onclick="this.nextElementSibling.classList.toggle('show')">Home2 <svg width="20" height="20"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polyline points="6 9 12 15 18 9"></polyline>
                 </svg></button>
             <div class="mobile-dropdown-content">
-                <a href="index.html">Home 1 (Dark)</a>
-                <a href="home2.html">Home 2 (Light)</a>
+                <a href="index.html">Home </a>
+
             </div>
             <a href="dashboard.html" class="mobile-nav-link" style="color: var(--color-text-primary);">Dashboard</a>
             <a href="login.html" class="mobile-nav-link" style="color: var(--color-text-primary);">Sign in</a>
@@ -156,28 +150,29 @@
         </div>
 
         <!-- Hero Section -->
-        <section class="section" style="padding-top: 80px; padding-bottom: 80px;">
-            <div class="container grid" style="grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
-                <div>
-                    <h1 class="animate-on-scroll" style="font-size: 3.5rem; letter-spacing: -0.02em;">Reimagining your
-                        commute.</h1>
+        <section class="section"
+            style="padding-top: 120px; min-height: 85vh; display: flex; align-items: center; position: relative; overflow: hidden; background-image: url('images/bg_bike.webp'); background-size: cover; background-position: center;">
+            <div
+                style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.1) 100%); z-index: 0;">
+            </div>
+            <div class="container grid"
+                style="grid-template-columns: 1fr; align-items: center; position: relative; z-index: 1;">
+                <div style="max-width: 650px;">
+                    <h1 class="animate-on-scroll"
+                        style="font-size: 4rem; letter-spacing: -0.02em; text-shadow: 0 4px 20px rgba(0,0,0,0.5); color: #fff;">
+                        Reimagining your commute.</h1>
                     <p class="text-lead animate-on-scroll"
-                        style="margin-top: 24px; margin-bottom: 40px; transition-delay: 0.1s;">
+                        style="margin-top: 24px; margin-bottom: 40px; transition-delay: 0.1s; color: rgba(255,255,255,0.85);">
                         We are streamlining the global infrastructure. Experience the power of our real-time network
                         designed to connect the physical and digital worlds effortlessly.
                     </p>
                     <div class="flex animate-on-scroll" style="gap: 16px; flex-wrap: wrap; transition-delay: 0.2s;">
-                        <a href="dashboard.html" class="btn btn-primary" style="padding: 16px 32px;">Go to Dashboard</a>
+                        <a href="dashboard.html" class="btn btn-primary"
+                            style="padding: 16px 32px; background: #fff; color: #000;">Go to Dashboard</a>
                         <a href="login.html" class="btn btn-secondary"
-                            style="background-color: var(--color-bg-secondary); color: var(--color-text-primary);">Sign
+                            style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.4); color: #fff; backdrop-filter: blur(6px);">Sign
                             in to get started</a>
                     </div>
-                </div>
-                <!-- WebP image 1 (<100kb expected from the fetch script) -->
-                <div class="animate-on-scroll"
-                    style="transition-delay: 0.3s; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-xl);">
-                    <img src="images/home2_img1.webp" alt="Modern city architecture"
-                        style="width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 4/3;">
                 </div>
             </div>
         </section>
@@ -230,8 +225,78 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container container-padding text-center">
-            <p class="text-muted">&copy; 2026 Stackly Technologies Inc. (Light Theme Preview)</p>
+        <div class="container text-left">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="footer-logo">Stackly</span>
+                    <p class="text-muted">Visit Help Center</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">About us</a></li>
+                        <li><a href="services.html" class="footer-link">Our offerings</a></li>
+                        <li><a href="related.html" class="footer-link">Newsroom</a></li>
+                        <li><a href="404.html" class="footer-link">Investors</a></li>
+                        <li><a href="404.html" class="footer-link">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html" class="footer-link">Ride</a></li>
+                        <li><a href="404.html" class="footer-link">Drive</a></li>
+                        <li><a href="404.html" class="footer-link">Deliver</a></li>
+                        <li><a href="404.html" class="footer-link">Eat</a></li>
+                        <li><a href="404.html" class="footer-link">Stackly for Business</a></li>
+                        <li><a href="404.html" class="footer-link">Stackly Freight</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Global citizenship</h4>
+                    <ul class="footer-links">
+                        <li><a href="404.html" class="footer-link">Safety</a></li>
+                        <li><a href="404.html" class="footer-link">Diversity and Inclusion</a></li>
+                        <li><a href="404.html" class="footer-link">Sustainability</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="flex" style="gap: 24px;">
+                    <a href="404.html" class="social-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg></a>
+                    <a href="404.html" class="social-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                            </path>
+                        </svg></a>
+                    <a href="404.html" class="social-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg></a>
+                </div>
+
+                <div class="flex" style="gap: 24px;">
+                    <a href="404.html" class="footer-link">Privacy policy</a>
+                    <a href="404.html" class="footer-link">Accessibility</a>
+                    <a href="404.html" class="footer-link">Terms</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 32px;">
+                <p class="text-muted" style="font-size: 0.8rem;">&copy; 2026 Stackly Technologies Inc. (Light Theme
+                    Preview)</p>
+            </div>
         </div>
     </footer>
 
