@@ -650,6 +650,17 @@ h4,
     margin-top: auto;
 }
 
+/* Login button must be visible on the white mobile overlay */
+.mobile-actions .btn-primary {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: none;
+}
+
+.mobile-actions .btn-primary:hover {
+    background-color: #222222;
+}
+
 /* =========================================
    FOOTER
    ========================================= */
