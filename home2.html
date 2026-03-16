@@ -88,6 +88,18 @@
             text-align: center;
             font-weight: 500;
         }
+
+        /* 320px start-screen & hero fixes */
+        @media (max-width: 360px) {
+            .section[style*="padding-top: 120px"] .container {
+                padding-left: 12px !important;
+                padding-right: 12px !important;
+            }
+            .featured-banner {
+                font-size: 0.875rem;
+                padding: 12px 8px;
+            }
+        }
     </style>
 </head>
 
@@ -161,7 +173,7 @@
                 style="grid-template-columns: 1fr; align-items: center; position: relative; z-index: 1;">
                 <div style="max-width: 650px;">
                     <h1 class="animate-on-scroll"
-                        style="font-size: 4rem; letter-spacing: -0.02em; text-shadow: 0 4px 20px rgba(0,0,0,0.5); color: #fff;">
+                        style="font-size: clamp(2rem, 8vw, 4rem); letter-spacing: -0.02em; text-shadow: 0 4px 20px rgba(0,0,0,0.5); color: #fff;">
                         Reimagining your commute.</h1>
                     <p class="text-lead animate-on-scroll"
                         style="margin-top: 24px; margin-bottom: 40px; transition-delay: 0.1s; color: rgba(255,255,255,0.85);">
@@ -188,7 +200,7 @@
                         your tools in one place with a clean, distraction-free environment tailored for efficiency.</p>
                 </div>
 
-                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
                     <!-- Card 1 -->
                     <div class="card animate-on-scroll" style="padding: 32px;">
                         <img src="images/home2_img2.webp" alt="Work tools"
@@ -218,7 +230,7 @@
         <!-- Bottom CTA -->
         <section class="section" style="padding: 120px 0; text-align: center;">
             <div class="container">
-                <h2 class="animate-on-scroll" style="font-size: 3rem; margin-bottom: 32px;">Ready to explore?</h2>
+                <h2 class="animate-on-scroll" style="font-size: clamp(1.8rem, 6vw, 3rem); margin-bottom: 32px;">Ready to explore?</h2>
                 <a href="login.html" class="btn btn-primary animate-on-scroll"
                     style="font-size: 1.25rem; padding: 16px 40px; transition-delay: 0.1s;">Sign in securely</a>
             </div>
