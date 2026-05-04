@@ -76,10 +76,10 @@
             </div>
         </section>
 
-        <!-- Category Filter Mockup -->
         <section
             style="background-color: var(--color-bg-primary); padding: 16px 0; border-bottom: 1px solid var(--color-border); position: sticky; top: var(--header-height); z-index: 900;">
-            <div class="container flex" style="gap: 16px; overflow-x: auto; white-space: nowrap; padding-bottom: 8px;">
+            <div class="container flex scroll-hide" style="gap: 16px; overflow-x: auto; white-space: nowrap; padding-bottom: 8px; scrollbar-width: none; -ms-overflow-style: none;">
+                <style>.scroll-hide::-webkit-scrollbar { display: none; }</style>
                 <a href="404.html" class="badge"
                     style="background-color: var(--color-white); color: var(--color-black); padding: 8px 16px; font-size: 0.875rem; text-decoration: none;">All
                     Services</a>
