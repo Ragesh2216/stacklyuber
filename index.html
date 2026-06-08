@@ -13,9 +13,7 @@
 
     <!-- Start Screen Animation -->
     <div id="start-screen" class="start-screen">
-        <div class="start-logo">
-            <img src="logo.webp" alt="Stackly Logo" style="height: 64px; width: auto; max-width: 100%;">
-        </div>
+        <div class="start-logo">Stackly</div>
         <div class="start-loader">
             <div class="start-loader-bar"></div>
         </div>
@@ -24,9 +22,7 @@
     <!-- Header Navigation -->
     <header class="header">
         <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <img src="logo.webp" alt="Stackly Logo" style="height: 32px; width: auto; margin-right: 8px;">
-            </a>
+            <a href="index.html" class="logo">Stackly</a>
 
             <!-- Desktop Nav -->
             <nav class="nav-menu">
@@ -37,7 +33,6 @@
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg></button>
                     <div class="dropdown-content">
-
                         <a href="home2.html">Home 2</a>
                     </div>
                 </div>
@@ -68,7 +63,6 @@
                     <polyline points="6 9 12 15 18 9"></polyline>
                 </svg></button>
             <div class="mobile-dropdown-content">
-
                 <a href="home2.html">Home 2</a>
             </div>
             <a href="services.html" class="mobile-nav-link">Services</a>
@@ -83,163 +77,283 @@
 
     <!-- Main Content -->
     <main class="main-content">
+        
         <!-- Hero Section -->
         <section class="section"
-            style="padding-top: 120px; min-height: 85vh; display: flex; align-items: center; position: relative; overflow: hidden; background-image: url('images/bg_auto.webp'); background-size: cover; background-position: center;">
+            style="padding-top: 140px; min-height: 90vh; display: flex; align-items: center; position: relative; overflow: hidden; background-image: url('images/bg_auto.webp'); background-size: cover; background-position: center;">
             <div
-                style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%); z-index: 0;">
+                style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.2) 100%); z-index: 0;">
             </div>
 
-            <div class="container grid"
-                style="grid-template-columns: 1fr; align-items: center; position: relative; z-index: 1;">
-                <div style="max-width: 650px;">
-                    <h1 class="animate-on-scroll"
-                        style="font-size: clamp(1.8rem, 8vw, 4rem); text-shadow: 0 4px 20px rgba(0,0,0,0.5); color: #fff;">
-                        Go anywhere with
-                        Stackly</h1>
-                    <p class="text-lead animate-on-scroll"
-                        style="margin-top: 24px; margin-bottom: 32px; transition-delay: 0.1s; font-size: clamp(0.95rem, 4vw, 1.25rem);">
-                        Request a ride, hop in, and go. Enjoy premium mobility and effortless logistics right at your
-                        fingertips. From local commutes to cross-country freight, we've got you covered.
+            <div class="container grid split-grid"
+                style="position: relative; z-index: 1; align-items: center;">
+                
+                <!-- Left: Booking Card Widget -->
+                <div class="animate-on-scroll">
+                    <div class="booking-card">
+                        <div class="booking-tabs">
+                            <div class="booking-tab-btn active" data-tab="ride">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px; vertical-align: middle;">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                </svg>
+                                Ride
+                            </div>
+                            <div class="booking-tab-btn" data-tab="deliver">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px; vertical-align: middle;">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                </svg>
+                                Deliver
+                            </div>
+                            <div class="booking-tab-btn" data-tab="earn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px; vertical-align: middle;">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="8" x2="12" y2="16"></line>
+                                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                                </svg>
+                                Earn
+                            </div>
+                        </div>
+
+                        <!-- Ride Panel -->
+                        <div class="booking-panel active" id="panel-ride">
+                            <h2 style="font-size: 1.4rem; margin-bottom: 20px;">Request a ride now</h2>
+                            <form onsubmit="event.preventDefault(); window.location.href='404.html';">
+                                <div class="booking-input-group">
+                                    <label class="booking-input-label">Pickup Location</label>
+                                    <div class="booking-input-wrapper">
+                                        <div class="booking-input-icon">📍</div>
+                                        <input type="text" class="booking-input" placeholder="Enter pickup location" required>
+                                    </div>
+                                </div>
+                                <div class="booking-input-group">
+                                    <label class="booking-input-label">Destination</label>
+                                    <div class="booking-input-wrapper">
+                                        <div class="booking-input-icon">🏁</div>
+                                        <input type="text" class="booking-input" placeholder="Enter destination" required>
+                                    </div>
+                                </div>
+                                <div class="booking-grid">
+                                    <div class="booking-input-group">
+                                        <label class="booking-input-label">Date</label>
+                                        <div class="booking-input-wrapper">
+                                            <input type="date" class="booking-input" style="padding-left: 16px;" required>
+                                        </div>
+                                    </div>
+                                    <div class="booking-input-group">
+                                        <label class="booking-input-label">Time</label>
+                                        <div class="booking-input-wrapper">
+                                            <input type="time" class="booking-input" style="padding-left: 16px;" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-accent btn-full" style="padding: 14px; margin-top: 10px;">Search Rides</button>
+                            </form>
+                        </div>
+
+                        <!-- Deliver Panel -->
+                        <div class="booking-panel" id="panel-deliver">
+                            <h2 style="font-size: 1.4rem; margin-bottom: 20px;">Send items instantly</h2>
+                            <form onsubmit="event.preventDefault(); window.location.href='404.html';">
+                                <div class="booking-input-group">
+                                    <label class="booking-input-label">Pickup Address</label>
+                                    <div class="booking-input-wrapper">
+                                        <div class="booking-input-icon">📍</div>
+                                        <input type="text" class="booking-input" placeholder="Enter pickup location" required>
+                                    </div>
+                                </div>
+                                <div class="booking-input-group">
+                                    <label class="booking-input-label">Dropoff Address</label>
+                                    <div class="booking-input-wrapper">
+                                        <div class="booking-input-icon">📦</div>
+                                        <input type="text" class="booking-input" placeholder="Enter recipient address" required>
+                                    </div>
+                                </div>
+                                <div class="booking-input-group">
+                                    <label class="booking-input-label">Item details</label>
+                                    <div class="booking-input-wrapper">
+                                        <div class="booking-input-icon">📝</div>
+                                        <input type="text" class="booking-input" placeholder="What are we sending? (e.g. keys, docs)" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-accent btn-full" style="padding: 14px; margin-top: 10px;">Request Delivery</button>
+                            </form>
+                        </div>
+
+                        <!-- Earn Panel -->
+                        <div class="booking-panel" id="panel-earn">
+                            <h2 style="font-size: 1.4rem; margin-bottom: 16px;">Drive and Earn</h2>
+                            <p class="text-muted" style="margin-bottom: 24px; line-height: 1.6; font-size: 0.95rem;">
+                                Turn your spare time into earnings. Drive on the largest mobility and logistics platform, set your own schedule, and get instant payouts.
+                            </p>
+                            <div style="margin-bottom: 24px;">
+                                <div class="flex items-center gap-16 mb-24">
+                                    <div class="icon-circle">💰</div>
+                                    <div>
+                                        <h4 style="margin: 0; font-size: 1rem;">Competitive Rates</h4>
+                                        <p class="text-muted text-small" style="margin: 0;">Keep 100% of your tips and get paid daily.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-16 mb-24">
+                                    <div class="icon-circle">🗓️</div>
+                                    <div>
+                                        <h4 style="margin: 0; font-size: 1rem;">Flexible Scheduling</h4>
+                                        <p class="text-muted text-small" style="margin: 0;">Drive whenever you want, day or night.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="window.location.href='login.html';" class="btn btn-accent btn-full" style="padding: 14px;">Sign Up to Drive</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Text & Value Prop -->
+                <div class="animate-on-scroll" style="transition-delay: 0.15s; max-width: 620px;">
+                    <h1 class="hero-title"><span class="text-gradient">Go anywhere,</span> get anything.</h1>
+                    <p class="hero-subtitle">
+                        Enjoy premium, on-demand mobility and effortless logistics right at your fingertips. Request a ride, order food, or ship freight across the country in real-time.
                     </p>
-                    <div class="flex animate-on-scroll" style="gap: 12px; flex-wrap: wrap; transition-delay: 0.2s;">
-                        <button class="btn btn-primary route-404"
-                            style="font-size: clamp(0.9rem, 4vw, 1.1rem); padding: 12px 20px; flex: 1 1 140px;">Request
-                            a ride</button>
-                        <button class="btn btn-secondary route-404"
-                            style="font-size: clamp(0.9rem, 4vw, 1.1rem); padding: 12px 20px; flex: 1 1 140px;">Schedule
-                            for later</button>
+                    <div class="flex" style="gap: 16px; flex-wrap: wrap;">
+                        <a href="services.html" class="btn btn-primary btn-large" style="flex: 0 1 auto; min-width: 170px;">Our Services</a>
+                        <a href="about.html" class="btn btn-outline btn-large" style="flex: 0 1 auto; min-width: 170px;">About Stackly</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Drive or Deliver Section -->
-        <section class="section" style="background-color: var(--color-bg-secondary);">
-            <div class="container grid" style="grid-template-columns: 1fr; max-width: 1000px;">
-                <div class="card flex-col justify-between animate-on-scroll"
-                    style="min-height: 400px; background: linear-gradient(135deg, var(--color-bg-tertiary) 0%, var(--color-bg-primary) 100%);">
-                    <div>
-                        <h2 style="font-size: 2.5rem; max-width: 600px;">Drive when you want, make what you need</h2>
-                        <p class="text-lead mt-16" style="margin-top: 24px; max-width: 700px;">Make money on your
-                            schedule with deliveries or rides—or both. You can use your own car or choose a rental
-                            through Stackly. Flexibility is our promise, empowering you to earn on your own terms.</p>
-                        <ul style="margin-top: 24px; list-style: none; padding: 0;">
-                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" style="color: var(--color-accent);">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg> Set your own hours
-                            </li>
-                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" style="color: var(--color-accent);">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg> Instant payouts available
-                            </li>
-                            <li style="display: flex; align-items: center; gap: 12px;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" style="color: var(--color-accent);">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg> 24/7 dedicated support
-                            </li>
-                        </ul>
+        <section class="section" style="background-color: var(--color-bg-secondary); position: relative;">
+            <div class="container grid split-grid" style="align-items: center;">
+                
+                <!-- Left: Earning details card -->
+                <div class="premium-feature-card animate-on-scroll">
+                    <span class="badge" style="background-color: var(--color-accent); margin-bottom: 20px;">Partner Network</span>
+                    <h2 style="font-size: clamp(2rem, 5vw, 2.75rem); line-height: 1.2;">Drive when you want, make what you need</h2>
+                    <p class="text-lead" style="margin-top: 20px; color: var(--color-text-secondary);">
+                        Make money on your own schedule with deliveries or rides—or both. Use your own car or get a rental through Stackly. We provide the platform, you keep the freedom.
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <div class="icon-circle">✓</div> Set your own flexible hours
+                        </li>
+                        <li>
+                            <div class="icon-circle">✓</div> Instant daily payouts available
+                        </li>
+                        <li>
+                            <div class="icon-circle">✓</div> 24/7 dedicated support & safety tracking
+                        </li>
+                    </ul>
+                    <div style="margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+                        <a href="login.html" class="btn btn-primary" style="padding: 14px 28px;">Get Started Driving</a>
+                        <a href="about.html" class="inline-link">Learn about fleet solutions &rarr;</a>
                     </div>
-                    <div class="mt-32" style="margin-top: 48px;">
-                        <button class="btn btn-primary route-404" style="padding: 14px 32px;">Get started
-                            driving</button>
-                        <a href="login.html" class="nav-link" style="margin-left: 24px;">Already have an account? Sign
-                            in</a>
+                </div>
+
+                <!-- Right: Visual -->
+                <div class="animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="image-wrapper shadow-premium">
+                        <img src="images/home2_img1.webp" alt="Partner Driving" style="width: 100%; border-radius: var(--border-radius-lg); transform: scale(1); transition: transform 0.5s ease;" class="object-cover">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Safety Focus Section -->
-        <section class="section">
-            <div class="container grid" style="grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+        <section class="section" style="position: relative;">
+            <div class="container grid split-grid" style="align-items: center;">
+                
+                <!-- Left: Visual -->
                 <div class="animate-on-scroll">
-                    <img src="images/site_img_6.webp" alt="Safety Features"
-                        style="border-radius: var(--border-radius-lg); width: 100%;">
+                    <div class="image-wrapper shadow-premium">
+                        <img src="images/site_img_6.webp" alt="Safety Features" style="width: 100%; border-radius: var(--border-radius-lg);">
+                    </div>
                 </div>
-                <div class="animate-on-scroll" style="transition-delay: 0.2s;">
-                    <h2>Your safety is our priority</h2>
-                    <p class="text-lead" style="margin-top: 24px; margin-bottom: 32px;">Every ride is tracked from start
-                        to finish. With comprehensive safety features built directly into the app, you can ride with
-                        peace of mind knowing we're looking out for you.</p>
 
-                    <div style="display: grid; gap: 24px;">
-                        <div>
-                            <h4>Share your trip</h4>
-                            <p class="text-muted" style="margin-top: 8px;">Let your loved ones know where you are in
-                                real-time, directly from the app.</p>
+                <!-- Right: Content -->
+                <div class="animate-on-scroll" style="transition-delay: 0.2s;">
+                    <span class="badge" style="margin-bottom: 20px;">Safety First</span>
+                    <h2 style="font-size: clamp(2rem, 5vw, 2.5rem); line-height: 1.2;">Your safety drives us</h2>
+                    <p class="text-lead" style="margin-top: 20px; margin-bottom: 32px;">
+                        Every ride is monitored from pickup to dropoff. With custom safety features built directly into our mobile application, you can request rides with absolute confidence.
+                    </p>
+
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon-sm">🛡️</div>
+                            <div class="feature-text">
+                                <h4>Share your trip status</h4>
+                                <p class="text-muted text-small">Let your loved ones follow your route in real-time with one tap.</p>
+                            </div>
                         </div>
-                        <div>
-                            <h4>Emergency assistance button</h4>
-                            <p class="text-muted" style="margin-top: 8px;">In an emergency, connect directly with local
-                                authorities through the app.</p>
+                        <div class="feature-item">
+                            <div class="feature-icon-sm">🚨</div>
+                            <div class="feature-text">
+                                <h4>Emergency Assistance</h4>
+                                <p class="text-muted text-small">Get immediate connection to emergency dispatch and share location details.</p>
+                            </div>
                         </div>
-                        <div>
-                            <h4>Driver screening</h4>
-                            <p class="text-muted" style="margin-top: 8px;">All drivers undergo thorough background
-                                checks before their first trip.</p>
+                        <div class="feature-item">
+                            <div class="feature-icon-sm">👤</div>
+                            <div class="feature-text">
+                                <h4>Verified Driver Screening</h4>
+                                <p class="text-muted text-small">All drivers undergo strict, multi-step background checks before their first trip.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <button class="btn btn-secondary route-404" style="margin-top: 32px;">Explore safety
-                        features</button>
+                    <button class="btn btn-secondary route-404" style="margin-top: 40px; padding: 14px 28px;">Explore safety protocol</button>
                 </div>
             </div>
         </section>
 
         <!-- Bike Service Highlight -->
-        <section class="section" style="background-color: var(--color-bg-primary);">
-            <div class="container grid" style="grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+        <section class="section" style="background-color: var(--color-bg-secondary);">
+            <div class="container grid split-grid" style="align-items: center;">
                 <div class="animate-on-scroll">
-                    <h2>Beat the traffic with Stackly Bike</h2>
-                    <p class="text-lead" style="margin-top: 24px; margin-bottom: 32px;">Need to get somewhere fast or
-                        send a quick parcel? Stackly Bike is our newest agile solution for crowded city streets.</p>
-                    <button class="btn btn-primary route-404">Explore Two-Wheel Options</button>
+                    <span class="badge" style="margin-bottom: 20px;">Agile Mobility</span>
+                    <h2 style="font-size: clamp(2rem, 5vw, 2.5rem); line-height: 1.2;">Beat traffic with Stackly Bike</h2>
+                    <p class="text-lead" style="margin-top: 20px; margin-bottom: 32px;">
+                        Need to zip across town or send a time-sensitive document? Stackly Bike is our agile solution designed specifically for tight city streets and rapid delivery.
+                    </p>
+                    <button class="btn btn-primary route-404" style="padding: 14px 28px;">Explore Two-Wheel Options</button>
                 </div>
                 <div class="animate-on-scroll" style="transition-delay: 0.2s;">
-                    <img src="images/bike.webp" alt="Stackly Bike Service"
-                        style="border-radius: var(--border-radius-lg); width: 100%; box-shadow: var(--shadow-lg);">
+                    <div class="image-wrapper shadow-premium">
+                        <img src="images/bike.webp" alt="Stackly Bike Service" style="width: 100%; border-radius: var(--border-radius-lg);">
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Download App Section -->
-        <section class="section" style="background-color: var(--color-bg-tertiary); text-align: center;">
+        <section class="section" style="background-color: var(--color-bg-primary); text-align: center; position: relative;">
             <div class="container">
-                <h2 class="animate-on-scroll">There's more to love in the apps</h2>
-                <div class="grid animate-on-scroll"
-                    style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 48px; max-width: 800px; margin-left: auto; margin-right: auto; transition-delay: 0.1s;">
+                <span class="badge animate-on-scroll" style="margin-bottom: 20px;">Mobile Applications</span>
+                <h2 class="animate-on-scroll" style="font-size: clamp(1.8rem, 5vw, 2.5rem); line-height: 1.2;">There's more to love in the apps</h2>
+                <p class="text-lead animate-on-scroll" style="max-width: 600px; margin: 16px auto 48px auto;">
+                    Install the Stackly applications on iOS and Android for real-time tracking, seamless payments, and instant notifications.
+                </p>
+                <div class="grid app-cards-grid animate-on-scroll" style="transition-delay: 0.1s;">
 
-                    <div class="card"
-                        style="display: flex; align-items: center; text-align: left; padding: 24px; border: 1px solid var(--color-border); cursor: pointer;"
-                        onclick="window.location.href='404.html'">
-                        <div
-                            style="width: 80px; height: 80px; background-color: var(--color-black); display: flex; justify-content: center; align-items: center; border-radius: 16px; margin-right: 24px; border: 1px solid var(--color-border-light);">
-                            <span style="font-size: 2rem; font-weight: 700; color: var(--color-white);">Stackly</span>
-                        </div>
-                        <div>
-                            <h3 style="margin-bottom: 8px;">Download the Stackly app</h3>
-                            <span class="nav-link route-404" style="color: var(--color-accent); font-weight: 600;">Scan
-                                to download -></span>
+                    <!-- Rider App Card -->
+                    <div class="app-card" onclick="window.location.href='404.html'">
+                        <div class="app-icon black-bg">S</div>
+                        <div class="app-info">
+                            <h3>Download Stackly Rider</h3>
+                            <p class="text-muted text-small" style="margin-bottom: 8px;">Order rides, deliveries, and track orders in one place.</p>
+                            <span class="app-link">Scan or tap to install &rarr;</span>
                         </div>
                     </div>
 
-                    <div class="card"
-                        style="display: flex; align-items: center; text-align: left; padding: 24px; border: 1px solid var(--color-border); cursor: pointer;"
-                        onclick="window.location.href='404.html'">
-                        <div
-                            style="width: 80px; height: 80px; background-color: #06C167; display: flex; justify-content: center; align-items: center; border-radius: 16px; margin-right: 24px;">
-                            <span style="font-size: 2rem; font-weight: 700; color: var(--color-white);">Eats</span>
-                        </div>
-                        <div>
-                            <h3 style="margin-bottom: 8px;">Download the Driver app</h3>
-                            <span class="nav-link route-404" style="color: var(--color-accent); font-weight: 600;">Scan
-                                to download -></span>
+                    <!-- Driver App Card -->
+                    <div class="app-card" onclick="window.location.href='404.html'">
+                        <div class="app-icon green-bg">D</div>
+                        <div class="app-info">
+                            <h3>Download Stackly Driver</h3>
+                            <p class="text-muted text-small" style="margin-bottom: 8px;">Accept trip requests, manage routes, and track earnings.</p>
+                            <span class="app-link" style="color: #06C167;">Scan or tap to install &rarr;</span>
                         </div>
                     </div>
                 </div>
@@ -247,62 +361,74 @@
         </section>
 
         <!-- Suggestions Section -->
-        <section class="section">
+        <section class="section" style="background-color: var(--color-bg-secondary);">
             <div class="container">
-                <h2 class="animate-on-scroll" style="margin-bottom: 48px; text-align: center;">Explore our offerings
-                </h2>
-                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-                    <div class="card animate-on-scroll" style="transition-delay: 0.1s;">
-                        <div class="flex justify-between items-center" style="margin-bottom: 24px;">
+                <div style="text-align: center; max-width: 600px; margin: 0 auto 56px auto;">
+                    <span class="badge animate-on-scroll" style="margin-bottom: 16px;">Our Offerings</span>
+                    <h2 class="animate-on-scroll" style="font-size: clamp(1.8rem, 5vw, 2.5rem);">Explore what you can do</h2>
+                    <p class="text-muted animate-on-scroll" style="margin-top: 16px; transition-delay: 0.1s;">
+                        We are building solutions to optimize how people move, how food is delivered, and how goods are shipped globally.
+                    </p>
+                </div>
+                
+                <div class="grid offerings-grid">
+                    
+                    <!-- Ride Offering -->
+                    <div class="offering-card animate-on-scroll" style="transition-delay: 0.1s;">
+                        <div class="offering-header">
                             <h3>Ride</h3>
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                                <path d="M7 11V7a5 5 0 0110 0v4"></path>
-                            </svg>
+                            <div class="offering-icon" style="color: var(--color-accent);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+                                    <circle cx="7" cy="17" r="2"></circle>
+                                    <circle cx="17" cy="17" r="2"></circle>
+                                    <path d="M13 17H9"></path>
+                                </svg>
+                            </div>
                         </div>
-                        <p class="text-muted" style="margin-bottom: 32px;">Go anywhere with Stackly. Request a ride, hop
-                            in, and go. Designed for reliability and comfort.</p>
-                        <button class="btn btn-secondary route-404" style="width: 100%;">Details</button>
+                        <p class="text-muted offering-desc">
+                            Go anywhere with Stackly. Request a ride, jump in, and relax. Safe, comfortable, and reliable.
+                        </p>
+                        <button onclick="window.location.href='services.html';" class="btn btn-secondary btn-full">Learn More</button>
                     </div>
 
-                    <div class="card animate-on-scroll" style="transition-delay: 0.2s;">
-                        <div class="flex justify-between items-center" style="margin-bottom: 24px;">
+                    <!-- Package Offering -->
+                    <div class="offering-card animate-on-scroll" style="transition-delay: 0.2s;">
+                        <div class="offering-header">
                             <h3>Package</h3>
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z">
-                                </path>
-                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                            </svg>
+                            <div class="offering-icon" style="color: var(--color-accent);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                </svg>
+                            </div>
                         </div>
-                        <p class="text-muted" style="margin-bottom: 32px;">Send and receive packages effortlessly with
-                            real-time tracking from door to door.</p>
-                        <button class="btn btn-secondary route-404" style="width: 100%;">Details</button>
+                        <p class="text-muted offering-desc">
+                            Send and receive packages across town instantly. Real-time courier tracking from door to door.
+                        </p>
+                        <button onclick="window.location.href='services.html';" class="btn btn-secondary btn-full">Learn More</button>
                     </div>
 
-                    <div class="card animate-on-scroll" style="transition-delay: 0.3s;">
-                        <div class="flex justify-between items-center" style="margin-bottom: 24px;">
+                    <!-- Transit Offering -->
+                    <div class="offering-card animate-on-scroll" style="transition-delay: 0.3s;">
+                        <div class="offering-header">
                             <h3>Transit</h3>
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
-                                <rect x="9" y="9" width="6" height="6"></rect>
-                                <line x1="9" y1="1" x2="9" y2="4"></line>
-                                <line x1="15" y1="1" x2="15" y2="4"></line>
-                                <line x1="9" y1="20" x2="9" y2="23"></line>
-                                <line x1="15" y1="20" x2="15" y2="23"></line>
-                                <line x1="20" y1="9" x2="23" y2="9"></line>
-                                <line x1="20" y1="14" x2="23" y2="14"></line>
-                                <line x1="1" y1="9" x2="4" y2="9"></line>
-                                <line x1="1" y1="14" x2="4" y2="14"></line>
-                            </svg>
+                            <div class="offering-icon" style="color: var(--color-accent);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                    <rect x="9" y="9" width="6" height="6"></rect>
+                                    <line x1="9" y1="1" x2="9" y2="4"></line>
+                                    <line x1="15" y1="1" x2="15" y2="4"></line>
+                                    <line x1="9" y1="20" x2="9" y2="23"></line>
+                                    <line x1="15" y1="20" x2="15" y2="23"></line>
+                                </svg>
+                            </div>
                         </div>
-                        <p class="text-muted" style="margin-bottom: 32px;">Discover smarter ways to plan and pay for
-                            your public transit journeys right in our app.</p>
-                        <button class="btn btn-secondary route-404" style="width: 100%;">Details</button>
+                        <p class="text-muted offering-desc">
+                            Integrate public transit routes, schedules, and digital ticket purchase right within the app.
+                        </p>
+                        <button onclick="window.location.href='services.html';" class="btn btn-secondary btn-full">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -311,71 +437,98 @@
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="footer-top-accent"></div>
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-brand">
-                    <span class="footer-logo">Stackly</span>
-                    <p class="text-muted">Visit Help Center</p>
+                <div class="footer-brand-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 16px; display: inline-flex;">Stackly</a>
+                    <p class="text-muted" style="margin-bottom: 24px; font-size: 0.95rem;">Go anywhere, get anything. A premium mobility & logistics platform connecting physical infrastructure in real-time.</p>
+                    <a href="404.html" class="btn btn-secondary btn-small" style="display: inline-flex; align-items: center; gap: 8px;">
+                        <span>🌐</span> Visit Help Center
+                    </a>
                 </div>
 
                 <div>
-                    <h4 class="footer-heading">Company</h4>
+                    <h4 class="footer-heading" style="color: var(--color-text-primary); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="about.html" class="footer-link">About us</a></li>
-                        <li><a href="services.html" class="footer-link">Our offerings</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="services.html" class="footer-link">Our Offerings</a></li>
                         <li><a href="related.html" class="footer-link">Newsroom</a></li>
                         <li><a href="404.html" class="footer-link">Investors</a></li>
-                        <li><a href="404.html" class="footer-link">Blog</a></li>
+                        <li><a href="404.html" class="footer-link">Careers</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="footer-heading">Products</h4>
+                    <h4 class="footer-heading" style="color: var(--color-text-primary); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Products</h4>
                     <ul class="footer-links">
-                        <li><a href="services.html" class="footer-link">Ride</a></li>
-                        <li><a href="404.html" class="footer-link">Drive</a></li>
-                        <li><a href="404.html" class="footer-link">Deliver</a></li>
-                        <li><a href="404.html" class="footer-link">Eat</a></li>
-                        <li><a href="404.html" class="footer-link">Stackly for Business</a></li>
-                        <li><a href="404.html" class="footer-link">Stackly Freight</a></li>
+                        <li><a href="services.html" class="footer-link">Rideshare</a></li>
+                        <li><a href="404.html" class="footer-link">Deliveries</a></li>
+                        <li><a href="services.html" class="footer-link">Stackly Bike</a></li>
+                        <li><a href="404.html" class="footer-link">Stackly Eats</a></li>
+                        <li><a href="services.html" class="footer-link">Stackly Freight</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="footer-heading">Global citizenship</h4>
+                    <h4 class="footer-heading" style="color: var(--color-text-primary); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Citizenship</h4>
                     <ul class="footer-links">
-                        <li><a href="404.html" class="footer-link">Safety</a></li>
-                        <li><a href="404.html" class="footer-link">Diversity and Inclusion</a></li>
-                        <li><a href="404.html" class="footer-link">Sustainability</a></li>
+                        <li><a href="404.html" class="footer-link">Safety First</a></li>
+                        <li><a href="404.html" class="footer-link">Diversity & Believing</a></li>
+                        <li><a href="404.html" class="footer-link">Zero Emission 2040</a></li>
+                        <li><a href="404.html" class="footer-link">Community Support</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <div class="flex" style="gap: 24px;">
-                    <a href="404.html" class="social-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                        </svg></a>
-                    <a href="404.html" class="social-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <path
-                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
-                            </path>
-                        </svg></a>
-                    <a href="404.html" class="social-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <path
-                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
-                            </path>
+            <!-- App Store Badges in Footer -->
+            <div class="footer-app-downloads">
+                <h4 style="color: var(--color-text-primary); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Download the experience</h4>
+                <div class="app-badges">
+                    <a href="404.html" class="app-badge-btn">
+                        <span>🍏</span>
+                        <div class="badge-text">
+                            <span>Download on the</span>
+                            <strong>App Store</strong>
+                        </div>
+                    </a>
+                    <a href="404.html" class="app-badge-btn">
+                        <span>🤖</span>
+                        <div class="badge-text">
+                            <span>Get it on</span>
+                            <strong>Google Play</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom" style="margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; flex-direction: column; gap: 24px;">
+                <div class="social-links-container">
+                    <a href="404.html" class="social-icon-btn" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="404.html" class="social-icon-btn" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                    <a href="404.html" class="social-icon-btn" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
                             <circle cx="4" cy="4" r="2"></circle>
-                        </svg></a>
+                        </svg>
+                    </a>
                 </div>
 
-                <div class="flex" style="gap: 24px;">
-                    <a href="404.html" class="footer-link">Privacy policy</a>
-                    <a href="404.html" class="footer-link">Accessibility</a>
-                    <a href="404.html" class="footer-link">Terms</a>
+                <div class="footer-legal" style="display: flex; justify-content: space-between; align-items: center; width: 100%; flex-wrap: wrap; gap: 16px;">
+                    <p class="copyright">&copy; 2026 Stackly Technologies Inc.</p>
+                    <div class="legal-links" style="display: flex; gap: 24px;">
+                        <a href="404.html" class="footer-link">Privacy Policy</a>
+                        <a href="404.html" class="footer-link">Terms of Service</a>
+                        <a href="404.html" class="footer-link">Accessibility</a>
+                    </div>
                 </div>
             </div>
         </div>

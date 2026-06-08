@@ -132,4 +132,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    /* =========================================
+       6. BOOKING WIDGET TAB SWITCHING
+       ========================================= */
+    const bookingTabs = document.querySelectorAll('.booking-tab-btn');
+    const bookingPanels = document.querySelectorAll('.booking-panel');
+
+    if (bookingTabs.length > 0 && bookingPanels.length > 0) {
+        bookingTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetPanelId = tab.getAttribute('data-tab');
+
+                // Deactivate all tabs & panels
+                bookingTabs.forEach(t => t.classList.remove('active'));
+                bookingPanels.forEach(p => p.classList.remove('active'));
+
+                // Activate clicked tab & target panel
+                tab.classList.add('active');
+                const targetPanel = document.getElementById(`panel-${targetPanelId}`);
+                if (targetPanel) {
+                    targetPanel.classList.add('active');
+                }
+            });
+        });
+    }
+
 });
